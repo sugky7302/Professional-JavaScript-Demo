@@ -6,12 +6,6 @@
 </head>
 <body>
 <script>
-    function sayHi() {
-        alert('Hi');
-    }
-    function sayScript() {
-        alert("<\/script>")
-    }
     function addLoadEvent(func) {
         var oldonload = window.onload;
         if (typeof window.onload != "function") {
@@ -23,6 +17,15 @@
             }
         }
     }
+
+    function sayHi() {
+        alert('Hi');
+    }
+
+    function sayScript() {
+        alert("<\/script>")
+    }
+
     addLoadEvent(sayHi());
     addLoadEvent(sayScript());
 </script>
