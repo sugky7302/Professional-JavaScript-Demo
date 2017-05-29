@@ -52,6 +52,18 @@
         alert(Number(''));
         alert(Number('000011'));
         alert(Number(true));
+
+        alert(parseInt('123hello'));
+        alert(parseInt(''));
+        alert(parseInt('0xA'));
+        alert(parseInt(22.5));
+        alert(parseInt('070'));//ECMAScript5没有按照8进制来解析
+        alert(parseInt('70'));
+        alert(parseInt('0xf'));
+
+        var text = 'this is \u03a3';
+        alert(text);
+        alert(text.length);
     </script>
 </head>
 <body>
