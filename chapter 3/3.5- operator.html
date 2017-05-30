@@ -9,9 +9,9 @@
         var m = false;
         var f = 1.1;
         var o = {
-        valueOf: function () {
-        return -1;
-        }
+            valueOf: function () {
+                return -1;
+            }
         };
 
         console.log(++s1);
@@ -19,6 +19,16 @@
         console.log(++m);
         console.log(--f);
         console.log(--o);
+
+        var res = 5 + 5;
+        console.log(res);
+        var res2 = 5 + '5';
+        console.log(res2);
+
+        var num1 = 5;
+        var num2 = 10;
+        console.log("5 and 10 is " + num1 + num2);
+        console.log("5 and 10 is " + (num1 + num2));
     </script>
 </head>
 <body>
