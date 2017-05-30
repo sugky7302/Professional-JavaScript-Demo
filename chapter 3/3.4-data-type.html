@@ -5,68 +5,75 @@
     <title>Title</title>
     <script>
         var message;
-        alert(message == undefined);//true
+        console.log(message == undefined);//true
 
         var message1 = undefined;
-        alert(message1 == undefined);
+        console.log(message1 == undefined);
 
         var tang;
-        alert(tang);
-//        alert(cheng);
+        console.log(tang);
+//        console.log(cheng);
 
         var tang;
-        alert(typeof tang);
-        alert(typeof cheng);
+        console.log(typeof tang);
+        console.log(typeof cheng);
 
-        alert(null == undefined);
+        console.log(null == undefined);
 
         var zhou = 'hi';
         var zhouBoolean = Boolean(zhou);
-        alert(zhouBoolean);
+        console.log(zhouBoolean);
 
         var jie = 'hi';
         if (jie){
-            alert("value is true");
+            console.log("value is true");
         }
 
         if (0.1 + 0.2 == 0.3){
-            alert("get 0.3");
+            console.log("get 0.3");
         }
 
         if (0.05 + 0.25 == 0.3){
-            alert("get 0.3");
+            console.log("get 0.3");
         }
 
         var result = Number.MAX_VALUE + Number.MAX_VALUE;
-        alert(isFinite(result));
+        console.log(isFinite(result));
 
-        alert(NaN == NaN);
+        console.log(NaN == NaN);
 
-        alert(isNaN(NaN));
-        alert(isNaN(10));
-        alert(isNaN("10"));
-        alert(isNaN("blue"));
-        alert(isNaN(true));
+        console.log(isNaN(NaN));
+        console.log(isNaN(10));
+        console.log(isNaN("10"));
+        console.log(isNaN("blue"));
+        console.log(isNaN(true));
 
-        alert(Number('hello'));
-        alert(Number(''));
-        alert(Number('000011'));
-        alert(Number(true));
+        console.log(Number('hello'));
+        console.log(Number(''));
+        console.log(Number('000011'));
+        console.log(Number(true));
 
-        alert(parseInt('123hello'));
-        alert(parseInt(''));
-        alert(parseInt('0xA'));
-        alert(parseInt(22.5));
-        alert(parseInt('070'));//ECMAScript5没有按照8进制来解析
-        alert(parseInt('70'));
-        alert(parseInt('0xf'));
+        console.log(parseInt('123hello'));
+        console.log(parseInt(''));
+        console.log(parseInt('0xA'));
+        console.log(parseInt(22.5));
+        console.log(parseInt('070'));//ECMAScript5没有按照8进制来解析
+        console.log(parseInt('70'));
+        console.log(parseInt('0xf'));
 
         var text = 'this is \u03a3';
-        alert(text);
-        alert(text.length);
+        console.log(text);
+        console.log(text.length);
 
         var age = 11;
-        alert(age.toString());
+        console.log(age.toString());
+        
+        var num = 10;
+        console.log(num.toString());
+        console.log(num.toString(2));
+        console.log(num.toString(8));
+        console.log(num.toString(16));
+        
     </script>
 </head>
 <body>
