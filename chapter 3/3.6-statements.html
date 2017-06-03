@@ -4,7 +4,33 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <script>
+        var count = 10;
+        for (i = 0; i < count; i++){
+            console.log(i);
+        }
+        console.log(i);
 
+        var num = 0;
+        outermost: for (var i = 0; i < 10; i++){
+            for (var j = 0; j < 10; j++){
+                if (i == 5 && j == 5){
+                    break outermost;
+                }
+                num++;
+            }
+        }
+        console.log(num);
+
+        var num1 = 0;
+        outermost: for (var i = 0; i < 10; i++){
+            for (var j = 0; j < 10; j++){
+                if (i == 5 && j == 5){
+                    continue outermost;
+                }
+                num1++;
+            }
+        }
+        console.log(num1);
     </script>
 </head>
 <body>
