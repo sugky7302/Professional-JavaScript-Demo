@@ -36,6 +36,23 @@
         var person1 = new Object();
         setName(person1);
         console.log(person1.name);
+
+        function setname(obj) {
+            obj.name = 'tc';
+            obj = new Object();
+            obj.name = 'cheng';
+        }
+        var person2 = new Object();
+        setname(person2);
+        console.log(person2.name);
+
+        var person = new Object();
+        var colors = new Array;
+        var pattern = new RegExp();
+        console.log(person instanceof Object);
+        console.log(colors instanceof Array);
+        console.log(pattern instanceof RegExp);
+
     </script>
 </head>
 <body>
