@@ -6,7 +6,31 @@
     <script>
         var person = {
             'name': 'tc',
-            'age': 27
+            'age': 27,
+            5: true
+        };
+
+        function displayInfo(args) {
+            var output = '';
+
+            if (typeof args.name == 'string'){
+                output += 'name:' + args.name + '\n';
+            }
+
+            if (typeof args.name == 'number'){
+                output += 'age:' + args.age + '\n';
+            }
+            console.log(output);
+        }
+
+        window.onload = function () {
+            displayInfo({
+                name: 'tc',
+                age: 27
+            });
+            displayInfo({
+                name: 'zj'
+            })
         };
     </script>
 </head>
