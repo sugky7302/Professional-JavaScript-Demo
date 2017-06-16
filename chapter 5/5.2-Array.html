@@ -8,6 +8,29 @@
         console.log(colors.toString());
         console.log(colors.valueOf());
         console.log(colors);
+
+        var person1 = {
+            toLocaleString: function () {
+                return 'tc';
+            },
+            toString: function () {
+                return 'zj';
+            }
+        };
+
+        var person2 = {
+            toLocaleString: function () {
+                return '11';
+            },
+            toString: function () {
+                return '22';
+            }
+        };
+
+        var people = [person1,person2];
+        console.log(people);
+        console.log(people.toString());
+        console.log(people.toLocaleString());
     </script>
 </head>
 <body>
