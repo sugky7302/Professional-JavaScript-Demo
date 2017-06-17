@@ -80,6 +80,11 @@
         }
         values.sort(compare);
         console.log(values);
+
+        function compare1(value1,value2) {
+            return value2 - value1;
+        }
+        console.log(values.sort(compare1));
     </script>
 </head>
 <body>
