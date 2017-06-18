@@ -6,6 +6,11 @@
     <script>
         var someDate = new Date(Date.parse('May 25,2017'));
         console.log(someDate);
+
+        var y2k = new Date(Date.UTC(2000,0));
+        var allFives = new Date(Date.UTC(2005,4,5,17,55,55));
+        console.log(y2k);
+        console.log(allFives);
     </script>
 </head>
 <body>
