@@ -8,9 +8,25 @@
         console.log(someDate);
 
         var y2k = new Date(Date.UTC(2000,0));
+        var y2k2 = new Date(2000,0);
+
         var allFives = new Date(Date.UTC(2005,4,5,17,55,55));
+        var allFives2 = new Date(2005,4,5,17,55,55);
+
         console.log(y2k);
+        console.log(y2k2);
+
         console.log(allFives);
+        console.log(allFives2);
+
+        var start = Date.now();
+
+        setTimeout(function () {
+            var stop = Date.now();
+            result = stop - start;
+            console.log(result);
+        },10000);
+
     </script>
 </head>
 <body>
