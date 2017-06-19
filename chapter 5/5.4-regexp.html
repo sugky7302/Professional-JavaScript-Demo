@@ -33,6 +33,15 @@
         console.log(matches[0]);
         console.log(matches[1]);
         console.log(matches[2]);
+
+        var text = 'cat, bat , sat , fat';
+        var pattern1 = /.at/;
+
+        var matches = pattern1.exec(text);
+        console.log(matches.index);
+        console.log(matches[0]);
+        console.log(pattern1.lastIndex);
+
     </script>
 </head>
 <body>
