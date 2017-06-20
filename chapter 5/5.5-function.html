@@ -12,7 +12,25 @@
         console.log(sum1(10,10));
         var sum1 = function (num1, num2) {
             return num1 + num2;
+        };
+
+        function callSomeFunction(someFunction,someArgument) {
+            return someFunction(someArgument);
         }
+
+        function add10(num) {
+            return num + 10;
+        }
+
+        var result = callSomeFunction(add10,10);
+        console.log(result);
+
+        function getGreeting(name) {
+            return 'hello' + name;
+        }
+
+        var result2 = callSomeFunction(getGreeting,'nicholas');
+        console.log(result2);
     </script>
 </head>
 <body>
