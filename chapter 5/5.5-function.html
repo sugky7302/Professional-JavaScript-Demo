@@ -101,6 +101,19 @@
             console.log(arguments.callee.caller);
         }
         outer();
+
+        function sayName(name) {
+            console.log(name);
+        }
+        function sum2(num1,num2) {
+            return num1 + num2;
+        }
+        function sayHi() {
+            console.log('hi');
+        }
+        console.log(sayName.length);
+        console.log(sum2.length);
+        console.log(sayHi.length);
     </script>
 </head>
 <body>
