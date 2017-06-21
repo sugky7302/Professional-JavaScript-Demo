@@ -89,8 +89,18 @@
 
         sayColor();
 
-        o.sayColor = sayColor();
+        o.sayColor = sayColor;
         o.sayColor();
+
+        function outer() {
+            inner();
+        }
+
+        function inner() {
+            console.log(inner.caller);
+            console.log(arguments.callee.caller);
+        }
+        outer();
     </script>
 </head>
 <body>
