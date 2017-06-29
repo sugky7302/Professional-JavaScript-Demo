@@ -90,6 +90,14 @@
         var trimmedStringValue = stringValue.trim();
         console.log(stringValue);
         console.log(trimmedStringValue);
+
+        var text = 'cat bat sat fat';
+        var pattern = /.at/;
+
+        var mateches = text.match(pattern);
+        console.log(mateches.index);
+        console.log(mateches[0]);
+        console.log(pattern.lastIndex);
     </script>
 </head>
 <body>
