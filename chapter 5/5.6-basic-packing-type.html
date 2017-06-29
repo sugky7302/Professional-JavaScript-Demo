@@ -69,6 +69,22 @@
         console.log(stringValue.slice(3,-4));
         console.log(stringValue.substring(3,-4));
         console.log(stringValue.substr(3,-4));
+
+        var stringValue = 'hello world';
+
+        console.log(stringValue.indexOf('o'));
+        console.log(stringValue.lastIndexOf('o'));
+        console.log(stringValue.indexOf('o',6));
+        console.log(stringValue.lastIndexOf('o',6));
+
+        var positions = new Array();
+        var pos = stringValue.indexOf('o');
+
+        while (pos > -1){
+            positions.push(pos);
+            pos = stringValue.indexOf('o',pos + 1);
+        }
+        console.log(positions);
     </script>
 </head>
 <body>
