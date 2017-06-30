@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        var person = {};
+        Object.defineProperty(person,'name',{
+            writable: false,
+            value: 'tc'
+        });
+        console.log(person.name);
+        person.name = 'zj';
+        console.log(person.name);
+
+        var person = {};
+        Object.defineProperty(person,'name',{
+            Configurable: false,
+            value: 'tc'
+        });
+        console.log(person.name);
+        delete person.name;
+        console.log(person.name);
+    </script>
+</head>
+<body>
+
+</body>
+</html>
