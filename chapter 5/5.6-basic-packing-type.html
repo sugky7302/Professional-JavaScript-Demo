@@ -129,6 +129,15 @@
             });
         }
         console.log(htmlEscape("<p class='greeting'>hello</p>"));
+
+        var colorText = 'red,blue,green,yellow';
+        var colors = colorText.split(',');
+        var colors2 = colorText.split(',',2);
+        var colors3 = colorText.split(/[^\,]+/);
+        console.log(colors);
+        console.log(colors2);
+        console.log(colors3);
+
     </script>
 </head>
 <body>
