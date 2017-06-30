@@ -142,6 +142,21 @@
         console.log(stringValue.localeCompare('brick'));	
         console.log(stringValue.localeCompare('yellow'));	
         console.log(stringValue.localeCompare('zoom'));		
+        
+        function determineOrder(value){
+        var result = stringValue.localeCompare(value);
+         if (result < 0){
+          console.log('the string "yellow" comes before the string "' + value + '".');
+        } else if (result > 0){
+          console.log('the string "yellow" comes after the string "' + value + '".');
+        }else {
+          console.log('the string "yellow" is equal to the string "' + value + '".');
+         }
+        }
+
+         determineOrder('brick');	
+         determineOrder('yellow');	
+         determineOrder('zoom');		
     </script>
 </head>
 <body>
