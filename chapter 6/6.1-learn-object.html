@@ -26,7 +26,7 @@
             _year: 2004,
             edition: 1
         };
-        Object.defineProperties(book,'year',{
+        Object.defineProperty(book,'year',{
             get: function () {
                 return this._year;
             },
@@ -39,6 +39,27 @@
         });
         book.year = 2005;
         console.log(book.edition);
+
+        var book = {};
+        Object.defineProperties(book,{
+            _year: {
+                value: 2004
+            },
+            edition: {
+                value: 1
+            },
+            year: {
+                get: function () {
+                    return this._year;
+                },
+                set: function (newValue) {
+                    if (newValue > 2004){
+                        this._year = newValue;
+                        this.edition += newValue - 2004;
+                    }
+                }
+            }
+        });
     </script>
 </head>
 <body>
