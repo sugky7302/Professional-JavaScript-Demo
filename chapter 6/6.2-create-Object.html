@@ -39,7 +39,7 @@
 
         //当作构造函数使用
         var person = new Person('tc',27,'SE');
-        person.sayName()
+        //person.sayName();
 
         //作为普通函数调用
         Person('tc',27,'SE');
@@ -48,7 +48,7 @@
         //在另一个对象的作用域中调用
         var o = new Object();
         Person.call(o,'tc',27,'SE');
-        o.sayName();
+        //o.sayName();
 
         function Person(name, age, job){
             this.name = name;
@@ -90,7 +90,7 @@
         person1.name = 'zj';
         console.log(person1.name);
         console.log(person2.name);
-        
+
     </script>
 </head>
 <body>
