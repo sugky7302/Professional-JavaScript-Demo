@@ -36,6 +36,19 @@
         console.log(person2 instanceof Person);
         console.log(person1 instanceof Object);
         console.log(person2 instanceof Object);
+
+        //当作构造函数使用
+        var person = new Person('tc',27,'SE');
+        person.sayName()
+
+        //作为普通函数调用
+        Person('tc',27,'SE');
+        window.sayName();
+
+        //在另一个对象的作用域中调用
+        var o = new Object();
+        Person.call(o,'tc',27,'SE');
+        o.sayName();
     </script>
 </head>
 <body>
