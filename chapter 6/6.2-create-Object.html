@@ -93,6 +93,16 @@
 
         delete person1.name;
         console.log(person1.name);
+
+        console.log(person1.hasOwnProperty('name'));
+
+        person1.name = 'zj';
+        console.log(person1.name);
+        console.log(person1.hasOwnProperty('name'));
+
+        delete person1.name;
+        console.log(person1.name);
+        console.log(perosn1.hasOwnProperty('name'));
     </script>
 </head>
 <body>
