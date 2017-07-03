@@ -60,6 +60,15 @@
                 }
             }
         });
+        var descriptor = Object.getOwnPropertyDescriptor(book,'_year');
+        console.log(descriptor.value);
+        console.log(descriptor.configurable);
+        console.log(typeof descriptor.get);
+
+        var descriptor = Object.getOwnPropertyDescriptor(book,'year');
+        console.log(descriptor.value);
+        console.log(descriptor.enumerable);
+        console.log(typeof descriptor.get);
     </script>
 </head>
 <body>
