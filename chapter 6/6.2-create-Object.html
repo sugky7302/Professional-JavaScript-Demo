@@ -102,7 +102,24 @@
 
         delete person1.name;
         console.log(person1.name);
-        console.log(perosn1.hasOwnProperty('name'));
+        console.log(person1.hasOwnProperty('name'));
+
+        console.log(person1.hasOwnProperty('name'));
+        console.log('name' in person1);
+
+        person1.name = 'zj';
+        console.log(person1.name);
+        console.log(person1.hasOwnProperty('name'));
+        console.log('name' in person1);
+
+        console.log(person2.name);
+        console.log(person2.hasOwnProperty('name'));
+        console.log('name' in person2);
+
+        delete person1.name;
+        console.log(person1.name);
+        console.log(person1.hasOwnProperty('name'));
+        console.log('name' in person1);
     </script>
 </head>
 <body>
