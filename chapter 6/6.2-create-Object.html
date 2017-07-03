@@ -80,6 +80,9 @@
         person2.sayName();
 
         console.log(person1.sayName == person2.sayName)
+
+        console.log(Person.prototype.isPrototypeOf(person1));
+        console.log(Person.prototype.isPrototypeOf(person2));
     </script>
 </head>
 <body>
