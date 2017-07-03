@@ -120,6 +120,10 @@
         console.log(person1.name);
         console.log(person1.hasOwnProperty('name'));
         console.log('name' in person1);
+
+        function hasPrototypeProperty(object, name) {
+            return !object.hasOwnProperty(name) && (name in object);
+        }
     </script>
 </head>
 <body>
