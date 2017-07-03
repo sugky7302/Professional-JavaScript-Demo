@@ -49,6 +49,20 @@
         var o = new Object();
         Person.call(o,'tc',27,'SE');
         o.sayName();
+
+        function Person(name, age, job){
+            this.name = name;
+            this.age = age;
+            this.job = job;
+            this.sayName = sayName;
+        }
+
+        function sayName (){
+            console.log(this.name);
+        };
+
+        var person1 = new Person('tc',27,'SE');
+        var person2 = new Person('zj',23,'Designer');
     </script>
 </head>
 <body>
