@@ -167,6 +167,16 @@
 
         var keys = Object.getOwnPropertyNames(Person.prototype);
         console.log(keys);
+
+        function Person(){}
+        Person.prototype = {
+            name: 'tc',
+            age: 27,
+            job: 'se',
+            sayName: function () {
+                console.log(this.name);
+            }
+        }
     </script>
 </head>
 <body>
