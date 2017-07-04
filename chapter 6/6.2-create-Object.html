@@ -199,6 +199,12 @@
             enumerable: false,
             value: Person
         });
+
+        var friend = new Person();
+        Person.prototype.sayName = function () {
+            console.log('hi');
+        };
+        friend.sayName();
     </script>
 </head>
 <body>
