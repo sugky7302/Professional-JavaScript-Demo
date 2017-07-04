@@ -194,6 +194,11 @@
                 console.log(this.name);
             }
         };
+
+        Object.defineProperty(Person.prototype,'constructor',{
+            enumerable: false,
+            value: Person
+        });
     </script>
 </head>
 <body>
