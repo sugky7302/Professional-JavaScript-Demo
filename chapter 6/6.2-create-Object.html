@@ -184,6 +184,16 @@
         console.log(friend instanceof Person);
         console.log(friend.constructor == Person);
         console.log(friend.constructor == Object);
+
+        Person.prototype = {
+            constructor: Person,
+            name: 'tc',
+            age: 27,
+            job: 'se',
+            sayName: function () {
+                console.log(this.name);
+            }
+        };
     </script>
 </head>
 <body>
