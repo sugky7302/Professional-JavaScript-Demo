@@ -228,6 +228,26 @@
         };
         var msg = 'hello world';
         console.log(msg.startWith('hello'));
+
+        Person.prototype = {
+            constructor: Person,
+            name: 'tc',
+            age: 27,
+            job: 'se',
+            friends: ['zj','tc'],
+            sayName: function () {
+                console.log(this.name);
+            }
+        };
+
+        var person1 = new Person();
+        var person2 = new Person();
+        person1.friends.push('wcx');
+
+        console.log(person1.friends);
+        console.log(person2.friends);
+        console.log(person1.friends === person2.friends);
+
     </script>
 </head>
 <body>
