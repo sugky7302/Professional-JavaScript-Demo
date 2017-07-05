@@ -248,6 +248,28 @@
         console.log(person2.friends);
         console.log(person1.friends === person2.friends);
 
+        function Person(name,age,job) {
+            this.name = name;
+            this.age = age;
+            this.job = job;
+            this.friends = ['tc','zj'];
+        }
+
+        Person.prototype = {
+            constructor: Person,
+            sayName: function () {
+                console.log(this.name);
+            }
+        };
+
+        var person1 = new Person('tc',29,'se');
+        var person2 = new Person('zj',24,'art');
+
+        person1.friends.push('wcx');
+        console.log(person1.friends);
+        console.log(person2.friends);
+        console.log(person1.friends === person2.friends);
+        console.log(person1.sayName === person2.sayName);
     </script>
 </head>
 <body>
