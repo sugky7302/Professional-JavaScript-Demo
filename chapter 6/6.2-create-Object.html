@@ -205,6 +205,20 @@
             console.log('hi');
         };
         friend.sayHi();
+
+        function Person() {}
+
+        var friend = new Person();
+        Person.prototype = {
+            constructor: Person,
+            name: 'tc',
+            age: 27,
+            job: 'se',
+            sayName: function () {
+                console.log(this.name);
+            }
+        };
+        friend.sayName();
     </script>
 </head>
 <body>
