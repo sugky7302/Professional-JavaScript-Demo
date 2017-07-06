@@ -31,6 +31,10 @@
         console.log(Object.prototype.isPrototypeOf(instance));
         console.log(SubType.prototype.isPrototypeOf(instance));
         console.log(SuperType.prototype.isPrototypeOf(instance));
+
+        function SuperType() {
+            this.property = true;
+        }
     </script>
 </head>
 <body>
