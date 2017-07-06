@@ -27,6 +27,10 @@
         console.log(instance instanceof Object);
         console.log(instance instanceof SuperType);
         console.log(instance instanceof SubType);
+
+        console.log(Object.prototype.isPrototypeOf(instance));
+        console.log(SubType.prototype.isPrototypeOf(instance));
+        console.log(SuperType.prototype.isPrototypeOf(instance));
     </script>
 </head>
 <body>
