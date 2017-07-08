@@ -107,6 +107,22 @@
         var instance2 = new SubType();
         console.log(instance2.color);
     </script>
+    <script>
+        function SuperType() {
+            this.color = ['red','blue','green'];
+        }
+
+        function SubType() {
+            //继承了SuperType
+            SuperType.call(this);
+        }
+
+        var instance1 = new SubType();
+        instance1.color.push('black');
+
+        var instance2 = new SubType();
+        console.log(instance2.color);
+    </script>
 </head>
 <body>
 
