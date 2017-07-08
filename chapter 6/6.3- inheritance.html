@@ -124,6 +124,23 @@
         var instance2 = new SubType();
         console.log(instance2.color);
     </script>
+    <script>
+        function SuperType() {
+            this.name = name;
+        }
+
+        function SubType() {
+            //继承了SuperType，同时还传递了参数
+            SuperType.call(this,'tc');
+
+            //实例属性
+            this.age = 29;
+        }
+
+        var instance = new SubType();
+        console.log(instance.name);
+        console.log(instance.age);
+    </script>
 </head>
 <body>
 
