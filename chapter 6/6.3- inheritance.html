@@ -198,6 +198,22 @@
 
         console.log(person.friend);
     </script>
+    <script>
+        var person = {
+            name: 'tc',
+            friend: ['syx','wcx','zj']
+        };
+
+        var anotherPerson = Object.create(person);
+        anotherPerson.name = 'zz';
+        anotherPerson.friend.push('cc');
+
+        var yetAnotherPerson = Object.create(person);
+        yetAnotherPerson.name = 'jj';
+        yetAnotherPerson.friend.push('tt');
+
+        console.log(person.friend);
+    </script>
 </head>
 <body>
 
