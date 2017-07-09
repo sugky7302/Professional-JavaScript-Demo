@@ -214,6 +214,20 @@
 
         console.log(person.friend);
     </script>
+    <script>
+        var person = {
+            name: 'tc',
+            friend: ['syx','wcx','zj']
+        };
+
+        var anotherPerson = Object.create(person,{
+            name: {
+                value: 'zj'
+            }
+        });
+
+        console.log(anotherPerson.name);
+    </script>
 </head>
 <body>
 
