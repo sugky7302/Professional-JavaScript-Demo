@@ -182,6 +182,21 @@
             F.prototype = o;
             return new F();
         }
+
+        var person = {
+            name: 'tc',
+            friend: ['syx','wcx','zj']
+        };
+
+        var anotherPerson = object(person);
+        anotherPerson.name = 'zz';
+        anotherPerson.friend.push('cc');
+
+        var yetAnotherPerson = object(person);
+        yetAnotherPerson.name = 'jj';
+        yetAnotherPerson.friend.push('tt');
+
+        console.log(person.friend);
     </script>
 </head>
 <body>
