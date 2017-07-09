@@ -228,6 +228,15 @@
 
         console.log(anotherPerson.name);
     </script>
+    <script>
+        function createAnother(original) {
+            var clone = object(original);
+            clone.sayHi = function () {
+                console.log('hi');
+            };
+            return clone;
+        }
+    </script>
 </head>
 <body>
 
