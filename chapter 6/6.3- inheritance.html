@@ -176,6 +176,13 @@
         instance2.sayName();
         instance2.sayAge();
     </script>
+    <script>
+        function object(o) {
+            function F() { }
+            F.prototype = o;
+            return new F();
+        }
+    </script>
 </head>
 <body>
 
