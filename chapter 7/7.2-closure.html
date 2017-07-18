@@ -39,6 +39,17 @@
 
         //解除对匿名函数的引用（以便释放内存）
         compareNames = null;
+
+        function createFunctions(){
+            var result = new Array();
+
+            for(var i = 0; i < 10; i++){
+                result[i] = function(){
+                    return i;
+                };
+            }
+            return result;
+        }
     </script>
 </head>
 <body>
