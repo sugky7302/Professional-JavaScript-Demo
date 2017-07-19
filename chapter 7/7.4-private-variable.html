@@ -8,6 +8,20 @@
             var sum = num1 + num2;
             return sum;
         }
+
+        function MyObject(){
+            //私有变量和私有函数
+            var privateVariable = 10;
+            function privateFunction(){
+                return false;
+            }
+
+            //特权方法
+            this.publicMethod = function (){		//this指向该构造函数的实例对象，并给这个实例对象创建一个publicMethod方法
+                privateVariable++;
+                return privateFunction();
+            }
+        }
     </script>
 </head>
 <body>
