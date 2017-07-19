@@ -117,6 +117,17 @@
                  console.log(element.id);
             };
         }
+        
+        function assignHandler(){
+          var element = document.getElementByID('someElement');
+          var id= element.id;
+
+          element.onclick = function(){
+            console.log(id);
+          };
+
+          element = null;
+        }
     </script>
 </head>
 <body>
