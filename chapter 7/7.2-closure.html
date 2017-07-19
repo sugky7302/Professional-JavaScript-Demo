@@ -67,6 +67,20 @@
         }
 
 //        console.log(createFunctions1());
+        
+        var name = 'the window';
+
+        var object = {
+          name: 'my object',
+
+          getNameFunc: function(){
+            return function(){
+              return this.name;		
+            };
+          }
+        };
+
+        console.log(object.getNameFunc()());
     </script>
 </head>
 <body>
