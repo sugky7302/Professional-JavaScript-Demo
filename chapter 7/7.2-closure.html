@@ -96,6 +96,20 @@
         };
 
         console.log(object.getNameFunc()());
+        
+        var name = 'the window';
+
+        var object = {
+          name: 'my object',
+
+          getName: function(){
+            return this.name;		
+          }
+        };
+
+        object.getName();						
+        (object.getName)();						
+        (object.getName = object.getName)();
     </script>
 </head>
 <body>
