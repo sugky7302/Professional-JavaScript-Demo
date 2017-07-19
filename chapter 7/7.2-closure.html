@@ -110,6 +110,13 @@
         object.getName();						
         (object.getName)();						
         (object.getName = object.getName)();
+        
+        function assignHandler(){
+            var element = document.getElementByID('someElement');
+            element.onclick = function(){
+                 console.log(element.id);
+            };
+        }
     </script>
 </head>
 <body>
