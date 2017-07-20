@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        var age = 29;
+        function sayAge(){
+            console.log(this.age);
+        }
+        console.log(window.age); //29
+        sayAge();				//29
+        window.sayAge();		//29
+    </script>
+</head>
+<body>
+
+</body>
+</html>
