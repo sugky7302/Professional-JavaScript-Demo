@@ -11,6 +11,18 @@
         console.log(window.age); //29
         sayAge();				//29
         window.sayAge();		//29
+
+        var age = 29;
+        window.color = 'red';
+
+        //在IE<9时抛出错误，在其他所有浏览器中都返回false
+        delete window.age;
+
+        //在IE<9时抛出错误，在其他所有浏览器中都返回true
+        delete window.color;
+
+        console.log(window.age);	//29
+        console.log(window.color);	//undefined
     </script>
 </head>
 <body>
