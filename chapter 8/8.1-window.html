@@ -23,6 +23,10 @@
 
         console.log(window.age);	//29
         console.log(window.color);	//undefined
+
+        var leftPos = (typeof window.screenLeft == 'number')?window.screenLeft:window.screenX;
+
+        var topPos = (typeof window.screenTop == 'number')?window.screenTop:window.screenY;
     </script>
 </head>
 <frameset rows="160,*">
