@@ -110,6 +110,22 @@
 
         //把它取消
         clearTimeout(timeoutID);
+        
+        var num = 0;
+        var max = 10;
+        var intervalID = null;
+
+        function incrementNumber(){
+          num++;
+
+          //如果执行次数达到了max设定的值，就取消后续尚未执行的调用
+          if (num == max){
+            clearInterval(intervalID);
+            console.log('done');
+          }
+        }
+
+        intervalID = setInterval(incrementNumber,500);
     </script>
 </head>
 <frameset rows="160,*">
