@@ -82,6 +82,11 @@
         var wroxWin = window.open('http://www.google.com','weoxWindow','heigh=400,width=400,top=10,left=10,resizeable=yes');
 
         wroxWin.opener = null;
+        
+        var wroxWin = window.open('http://www.google.com','_blank');
+        if (wroxWin == null){
+          console.log('the popup was blocked!')
+        }
     </script>
 </head>
 <frameset rows="160,*">
