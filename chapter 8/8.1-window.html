@@ -74,6 +74,10 @@
         
         wroxWin.close();
         console.log(wroxWin.closed);
+        
+        var wroxWin = window.open('http://www.google.com','weoxWindow','heigh=400,width=400,top=10,left=10,resizeable=yes');
+
+        console.log(wroxWin.opener == window);
     </script>
 </head>
 <frameset rows="160,*">
