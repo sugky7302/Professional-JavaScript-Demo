@@ -39,6 +39,19 @@
 
         //将窗口向左移动50px
         window.moveBy(-50,0);
+        
+        var pageWidth = window.innerWidth,
+            pageHeight = window.innerHeight;
+
+        if (typeof pageWidth != 'number'){
+          if (document.cpmpatMode == 'CSS1Compat'){
+            pageWidth = document.documentElement.clientWidth;
+            pageHeight = document.documentElement.clientHeight;
+          } else {
+            pageWidth = document.body.clientWidth;
+            pageHeight = document.body.clientHeight;
+          }
+        }
     </script>
 </head>
 <frameset rows="160,*">
