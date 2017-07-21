@@ -102,6 +102,14 @@
         if (blocked) {
           console.log('the popup was blocked!');
         }
+        
+        //设置超时调用
+        var timeoutID = setTimeout(function(){
+          console.log('hello');
+        },1000);
+
+        //把它取消
+        clearTimeout(timeoutID);
     </script>
 </head>
 <frameset rows="160,*">
