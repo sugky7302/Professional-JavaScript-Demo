@@ -57,9 +57,17 @@
 
         //将URL修改为 http://www.yahoo.com:8080/WileyCDA/
         location.port = 8080;
+
+        location.replace();
+        location.reload(true);
     </script>
 </head>
 <body>
-
+<p>enjoy this page for a second, because you won't be coming back here</p>
+<script>
+    setTimeout(function () {
+        location.replace('http://tc9011.com')
+    },1000)
+</script>
 </body>
 </html>
