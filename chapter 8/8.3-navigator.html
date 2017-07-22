@@ -17,6 +17,19 @@
 
         console.log(hasPlugin('Flash'));
         console.log(hasPlugin('QuickTime'));
+
+        //检测IE中的插件
+        function hasIEPlugin(name) {
+            try {
+                new ActiveXObject(name);
+                return true;
+            }catch (ex) {
+                return false;
+            }
+        }
+
+        console.log(hasIEPlugin('shockwaveFlash.shockwaveFlash'));
+        console.log(hasIEPlugin('QuickTime.QuickTime'));
     </script>
 </head>
 <body>
