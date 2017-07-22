@@ -51,9 +51,12 @@
 
         console.log(hasFlash());
         console.log(hasQuickTime());
-        
+
         navigator.registerContentHandler('application/rss+xml',
         'http://www.somereader.com?feed=%s','Some Reader');
+
+        navigator.registerProtocolHandler('mailto',
+            'http://www.somereader.com?cmd=%s','Some Mail Client');
     </script>
 </head>
 <body>
