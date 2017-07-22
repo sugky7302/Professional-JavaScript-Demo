@@ -51,6 +51,9 @@
 
         console.log(hasFlash());
         console.log(hasQuickTime());
+        
+        navigator.registerContentHandler('application/rss+xml',
+        'http://www.somereader.com?feed=%s','Some Reader');
     </script>
 </head>
 <body>
