@@ -30,6 +30,27 @@
 
         console.log(hasIEPlugin('shockwaveFlash.shockwaveFlash'));
         console.log(hasIEPlugin('QuickTime.QuickTime'));
+
+        //检测所有浏览器中的Flash
+        function hasFlash() {
+            var result = hasPlugin('Flash');
+            if (!result){
+                result = hasIEPlugin('shockwaveFlash.shockwaveFlash');
+            }
+            return result;
+        }
+        
+        //检测所有浏览器中的QuickTime
+        function hasQuickTime() {
+            var result = hasPlugin('QuickTime');
+            if (!result){
+                result = hasIEPlugin('QuickTime.QuickTime');
+            }
+            return result;
+        }
+
+        console.log(hasFlash());
+        console.log(hasQuickTime());
     </script>
 </head>
 <body>
