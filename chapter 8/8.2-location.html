@@ -33,6 +33,11 @@
 
             return args;
         }
+
+        //假设查询字符串是 ?q=javascript&num=10
+        var args = getQueryStringArgs();	//每个查询字符串都成了返回对象的属性
+        console.log(args['q']);		//javascript
+        console.log(args['num']);	//10
     </script>
 </head>
 <body>
