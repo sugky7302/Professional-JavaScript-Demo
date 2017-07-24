@@ -10,7 +10,9 @@
 
         var result = isSortable({sort: true});
 
-
+        function isSortable(object){
+            return typeof object.sort == 'function';
+        }
     </script>
 </head>
 <body>
