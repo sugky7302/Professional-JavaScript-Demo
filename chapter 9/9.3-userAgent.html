@@ -18,10 +18,16 @@
             };
 
             //在此检测呈现引擎、平台和设备
+            var ua = navigator.userAgent;
+
             if (window.opera) {
               engine.ver = window.opera.version();
               engine.opera = parseFloat(engine.ver);
+            } else if (/AppleWebKit\/(\S+)/.test(ua)){
+              engine.ver = RegExp['$1'];
+              engine.webkit = parseFloat(engine.ver);
             }
+            
             return{
                 engine: engine
             };
