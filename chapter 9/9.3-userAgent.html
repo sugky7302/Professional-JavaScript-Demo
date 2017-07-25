@@ -30,6 +30,12 @@
                 //具体版本号
                 ver: null
             };
+            
+              var system = {
+                win: false,
+                mac: false,
+                x11: false
+              }
 
             //检测呈现引擎及浏览器
             var ua = navigator.userAgent;	
@@ -82,7 +88,8 @@
             
             return{
                 engine: engine,
-                browser: browser
+                browser: browser,
+                system: system
             };
         }();
     </script>
