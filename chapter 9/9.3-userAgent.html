@@ -16,10 +16,9 @@
                 //具体版本号
                 ver: null
             };
-            
-            
+
+            //浏览器
             var browser = {
-                //浏览器
                 ie: 0,
                 firefox: 0,
                 safari: 0,
@@ -152,6 +151,10 @@
             if (/Android(\d+\.\d+)/.test(ua)){
                 system.android = parseFloat(RegExp.$1);
             }
+
+            //检测游戏系统版本
+            system.wii = ua.indexOf('wii') > -1;
+            system.ps = /playstation/i.test(ua);
 
             return{
                 engine: engine,
