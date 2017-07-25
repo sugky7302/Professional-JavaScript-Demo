@@ -100,7 +100,11 @@
               engine.ver = browser.ver = RegExp['$1'];
               engine.ie = browser.ie = parseFloat(engine.ver);
             }
-            
+
+            //检测浏览器
+            browser.ie = engine.ie;
+            browser.opera = engine.opera;
+
             //检测平台
             var p = navigator.platform;
             system.win = p.indexOf('Win') == 0;
