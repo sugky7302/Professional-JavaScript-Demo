@@ -86,6 +86,12 @@
               engine.ie = browser.ie = parseFloat(engine.ver);
             }
             
+            //检测平台
+            var p = navigator.platform;
+            system.win = p.indexOf('Win') == 0;
+            system.mac = p.indexOf('Mac') == 0;
+            system.xll = (p.indexOf('Xll') == 0) || (p.indexOf('Linux') == 0);
+            
             return{
                 engine: engine,
                 browser: browser,
