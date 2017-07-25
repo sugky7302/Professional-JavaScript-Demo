@@ -16,6 +16,20 @@
                 //具体版本号
                 ver: null
             };
+            
+            
+            var browser = {
+            //浏览器
+            ie: 0,
+            firefox: 0,
+            safari: 0,
+            konq: 0,
+            opera: 0,
+            chrome: 0,
+
+            //具体版本号
+            ver: null
+            };
 
             //在此检测呈现引擎、平台和设备
             var ua = navigator.userAgent;
@@ -38,7 +52,8 @@
             }
             
             return{
-                engine: engine
+                engine: engine,
+                browser: browser
             };
         }();
     </script>
