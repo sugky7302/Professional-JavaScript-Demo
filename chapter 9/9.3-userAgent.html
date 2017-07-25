@@ -32,6 +32,9 @@
             } else if (/rv:([^\)]+)\) Gecko\/\d{8}/.test(ua)){
               engine.ver = RegExp['$1'];
               engine.webkit = parseFloat(engine.ver);
+            } else if (/MSIE ([^;]+)/.test(ua)) {
+              engine.ver = RegExp['$1'];
+              engine.webkit = parseFloat(engine.ver);
             }
             
             return{
