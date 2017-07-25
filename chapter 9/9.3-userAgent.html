@@ -140,7 +140,7 @@
                 }
             }
 
-            //检测移动端
+            //移动设备
             system.iphone = ua.indexOf('iphone') > -1;
             system.ipod = ua.indexOf('ipod') > -1;
             system.ipad = ua.indexOf('ipad') > -1;
@@ -159,10 +159,11 @@
                 system.android = parseFloat(RegExp.$1);
             }
 
-            //检测游戏系统版本
+            //检测游戏系统
             system.wii = ua.indexOf('wii') > -1;
             system.ps = /playstation/i.test(ua);
 
+            //返回这些对象
             return{
                 engine: engine,
                 browser: browser,
