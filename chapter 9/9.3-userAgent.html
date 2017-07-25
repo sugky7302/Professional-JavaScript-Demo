@@ -129,7 +129,21 @@
                     }
                 }
             }
-            
+
+            //检测移动端
+            system.iphone = ua.indexOf('iphone') > -1;
+            system.ipod = ua.indexOf('ipod') > -1;
+            system.ipad = ua.indexOf('ipad') > -1;
+
+            //检测IOS版本号
+            if (system.mac && ua.indexOf('Mobile') > -1) {
+                if (/CPU(?:iphone)?OS(\d+_\d+)/.test(ua)){
+                    system.ios = parseFloat(RegExp.$1.replace('_','.'));
+                }else {
+                    system.ios = 2; //不能真正检测出来，只能猜测
+                }
+            }
+
             return{
                 engine: engine,
                 browser: browser,
