@@ -9,6 +9,10 @@
         
         //在IE8及之前版本中无效
         var arrayOfNodes = Array.prototype.slice.call(someNode.children,0);
+
+        var returnedNode = someNode.appendChild(newNode);
+        console.log(returnedNode == newNode);
+        console.log(someNode.lastChild == newNode);
     </script>
 </head>
 <body>
