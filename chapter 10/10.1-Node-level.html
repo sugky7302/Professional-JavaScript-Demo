@@ -18,6 +18,19 @@
         var returnedNode = someNode.appendChild(someNode.firstChild);
         console.log(returnedNode == someNode.firstChild);   //false
         console.log(returnedNode == someNode.lastChild);    //true
+        
+        //插入后成为最后一个子节点
+        returnedNode = someNode.insertBefore(newNode,null);
+        console.log(newNode == someNode.lastChild);		//true
+
+        //插入后成为第一个子节点
+        var returnedNode = someNode.insertBerfore(newNode,smeNode.firstChild);
+        console.log(returnedNode == newNode);			//true
+        console.log(newNode == someNode.firstChild);	//true
+
+        //插入到最后一个子节点前面
+        returnedNode == someNode.insertBefore(newNode,someNode.lastChild);
+        console.log(newNode == someNode.childNodes[someNode.childNodes.length-2]);	//true
     </script>
 </head>
 <body>
