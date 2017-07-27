@@ -31,6 +31,13 @@
         //插入到最后一个子节点前面
         returnedNode == someNode.insertBefore(newNode,someNode.lastChild);
         console.log(newNode == someNode.childNodes[someNode.childNodes.length-2]);	//true
+        
+        var myList = document.getElementsByTagName('ul');
+        var deepList = myList.cloneNode(true);
+        console.log(deepList.childNodes.length);	//3（IE<9）或7（其他浏览器）
+
+        var shallowList = myList.cloneNode(false);
+        console.log(shallowList.childNodes.length)	//0
     </script>
 </head>
 <body>
