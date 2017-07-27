@@ -6,7 +6,7 @@
     <script>
         var firstChild = someNode.childNodes[0];
         var secondChild = someNode.childNodes.item(1);
-        
+
         //在IE8及之前版本中无效
         var arrayOfNodes = Array.prototype.slice.call(someNode.children,0);
 
@@ -18,7 +18,7 @@
         var returnedNode = someNode.appendChild(someNode.firstChild);
         console.log(returnedNode == someNode.firstChild);   //false
         console.log(returnedNode == someNode.lastChild);    //true
-        
+
         //插入后成为最后一个子节点
         returnedNode = someNode.insertBefore(newNode,null);
         console.log(newNode == someNode.lastChild);		//true
@@ -31,17 +31,20 @@
         //插入到最后一个子节点前面
         returnedNode == someNode.insertBefore(newNode,someNode.lastChild);
         console.log(newNode == someNode.childNodes[someNode.childNodes.length-2]);	//true
-        
+
         var myList = document.getElementsByTagName('ul');
         var deepList = myList.cloneNode(true);
         console.log(deepList.childNodes.length);	//3（IE<9）或7（其他浏览器）
 
         var shallowList = myList.cloneNode(false);
         console.log(shallowList.childNodes.length)	//0
-        
+
         var html = document.documentElement;    //取得<html>的引用
         console.log(html === document.childNodes[0]);   //true
         console.log(html === document.firstChild);      //true
+
+        var originalTitle = document.title;
+        document.title = 'new title';
     </script>
 </head>
 <body>
