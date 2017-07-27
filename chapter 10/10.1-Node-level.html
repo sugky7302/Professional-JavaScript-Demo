@@ -38,6 +38,10 @@
 
         var shallowList = myList.cloneNode(false);
         console.log(shallowList.childNodes.length)	//0
+        
+        var html = document.documentElement;    //取得<html>的引用
+        console.log(html === document.childNodes[0]);   //true
+        console.log(html === document.firstChild);      //true
     </script>
 </head>
 <body>
