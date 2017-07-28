@@ -69,6 +69,10 @@
         var hasXmlDom = document.implementation.hasFeature('XML','1.0');
         
         document.write('<script src="file.js">' + '<\/script>');
+        
+        var div = document.getElementById('myDiv');
+        console.log(div.tagName);					//DIV
+        console.log(div.tagName == div.nodeName);	//true
     </script>
 </head>
 <body>
