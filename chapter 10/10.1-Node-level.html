@@ -59,7 +59,8 @@
         document.domain = 'wrox.com';			//松散的(成功)
         document.domain = 'p2p.wrox.com';		//紧绷的(出错)
         
-        
+        var images = document.getElementsByTagName('img');
+        var myImage = images.namedItem('myImage');
     </script>
 </head>
 <body>
