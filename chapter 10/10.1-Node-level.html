@@ -98,6 +98,8 @@
         var id = element.attributes.getNamedItem('id').nodeValue;
         
         var id = element.attributes['id'].nodeValue;
+        
+        element.attributes['id'].nodeValue = 'someOtherId';
     </script>
 </head>
 <body>
