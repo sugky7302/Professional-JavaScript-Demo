@@ -81,6 +81,10 @@
         console.log(div.getAttribute('dir'));
         
         var value = div.getAttribute('my_special_attribute');
+        
+        console.log(div.id);							//myDiv
+        console.log(div.my_special_attribute);			//undefined(IE除外)
+        console,log(div.align);							//left
     </script>
 </head>
 <body>
@@ -118,5 +122,7 @@
       </script>
 
     <div id="myDiv" my_special_attribute="hello"></div>
+    
+    <div id="myDiv" align='left' my_special_attribute="hello"></div>
 </body>
 </html>
