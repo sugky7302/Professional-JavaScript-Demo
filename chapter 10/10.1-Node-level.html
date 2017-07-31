@@ -94,6 +94,8 @@
         
         div.mycolor = 'red';
         console.log(div.getAttribute('mycolor'));	//null(IE除外)
+        
+        var id = element.attributes.getNamedItem('id').nodeValue;
     </script>
 </head>
 <body>
