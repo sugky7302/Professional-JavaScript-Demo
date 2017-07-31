@@ -91,6 +91,9 @@
         div.setAttribute('title','Some other text');
         div.setAttribute('lang','fr');
         div.setAttribute('dir','rtl');
+        
+        div.mycolor = 'red';
+        console.log(div.getAttribute('mycolor'));	//null(IE除外)
     </script>
 </head>
 <body>
