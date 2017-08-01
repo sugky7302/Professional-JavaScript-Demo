@@ -119,6 +119,9 @@
         var div = document.createElement('div');
         div.id = 'myNewDiv';
         div.className = 'box';
+        
+        //输出结果 'some &lt;strong&gt;other&lt;/strong&gt; message'
+        div.firstChild.nodeValue = 'some <strong>other</strong> message'    
     </script>
 </head>
 <body>
