@@ -27,6 +27,33 @@
         }
 
         loadScriptString('function sayHi(){ console.log("hi")}');
+        
+        //<link>元素用于包含来自外部的文件
+        function loadStyles(url) {
+          var link = document.createElement('link');
+          link.rel = 'stylesheet';
+          link.type = 'text/css';
+          link.href = url;
+          var head = document.getElementByTagName('head')[0];
+          head.appendChild(link);
+        }
+
+        loadStyles('xxx.css');
+
+        //<style>元素用于指定嵌入的样式
+        function loadStyleString(css){
+          var style = document.createElement('style');
+          style.type = 'text/css';
+          try {
+            style.appendChild(document.createTextNode(css));
+          } catch (ex) {
+            style.styleSheet.cssText = css;
+          }
+          var head = document.getElementsByTagName('head')[0];
+          head.appendChild(style);
+        }
+
+        loadStyleString('body{color: red}');
     </script>
 </head>
 <body>
