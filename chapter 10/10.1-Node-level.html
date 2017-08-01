@@ -130,6 +130,17 @@
         element.appendChild(textNode);
 
         document.body.appendChild(element);
+        
+        var element = document.createElement('div');
+        element.className = 'message';
+
+        var textNode = document.createTextNode('hello world');
+        element.appendChild(textNode);
+
+        var anotherTextNode = document.createTextNode('yippee');
+        element.appendChild(anotherTextNode);
+
+        document.body.appendChild(element);
     </script>
 </head>
 <body>
