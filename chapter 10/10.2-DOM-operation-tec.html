@@ -80,6 +80,27 @@
 
         //将表格添加到文档主体中
         document.body.appendChild(table);
+        
+        //下面代码会导致死循环
+        var divs = document.getElementsByTagName('div'),
+            i,
+            div;
+
+        for(i = 0; i < divs.length; i++){
+          div = document.createElement('div');
+          document.body.appendChild(div);
+        }
+
+        //如果要迭代一个NodeList，最好使用length属性初始化第二个变量，然后将迭代器与该变量进行比较
+        var divs = document.getElementsByTagName('div'),
+            i,
+            len,
+            div;
+
+        for(i = 0, len = divs.length; i < len; i++){
+          div = document.createElement('div');
+          document.body.appendChild(div);
+        }
     </script>
 </head>
 <body>
