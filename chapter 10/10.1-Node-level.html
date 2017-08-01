@@ -121,7 +121,15 @@
         div.className = 'box';
         
         //输出结果 'some &lt;strong&gt;other&lt;/strong&gt; message'
-        div.firstChild.nodeValue = 'some <strong>other</strong> message'    
+        div.firstChild.nodeValue = 'some <strong>other</strong> message';
+        
+        var element = document.createElement('div');
+        element.className = 'message';
+
+        var textNode = document.createTextNode('hello world');
+        element.appendChild(textNode);
+
+        document.body.appendChild(element);
     </script>
 </head>
 <body>
