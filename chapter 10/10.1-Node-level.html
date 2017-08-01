@@ -146,6 +146,10 @@
         element.normalize();
         console.log(element.childNodes.length);		//1
         console.log(element.firstChild.nodeValue);	//hello worldyippee
+        
+        var div = document.getElementById('myDiv');
+        var comment = div.firsrChild;
+        console.log(comment.data);
     </script>
 </head>
 <body>
