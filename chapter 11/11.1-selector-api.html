@@ -24,6 +24,12 @@
 
         //取得<p>元素中的所有<strong>元素
         var strongs =document.querySelectorAll('p strong');
+
+        var i, len, strong;
+        for (i = 0, len = strong.length; i < len; i++){
+            strong = strong[i];     //或者strong。item(i)
+            strong.className = 'important';
+        }
     </script>
 </head>
 <body>
