@@ -11,6 +11,12 @@
             }
             child = child.nextSibling;
         }
+
+        var i, len, child = element.firstChild;
+        while (child != element.lastElementChild) {
+            processChild(child);        //已知其是元素
+            child = child.nextElementSibling;
+        }
     </script>
 </head>
 <body>
