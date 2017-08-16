@@ -7,10 +7,32 @@
         // 取得所有类中包含username和current的元素，类名先后顺序无所谓
         var allCurrentUsernames = document.getElementsByClassName('username current');
         // 取得ID为myDiv的元素中带有类名selected的所有元素
-        var selected = document.getElementById('myDiv').getElementsByClassName('selected')
+        var selected = document.getElementById('myDiv').getElementsByClassName('selected');
+
+        // 删除user类
+        // 首先取得类名字字符串并拆分成数组
+        var classNames = div.className.split(/\s+/);
+
+        // 找到要删的类名
+        var pos = 1,
+            i,
+            len;
+        for (i = 0, len = classNames.length; i < len; i++){
+            if (classNames[i] == 'user'){
+                pos = i;
+                break;
+            }
+        }
+
+        // 删除类名
+        classNames.splice(i, 1);
+
+        // 把剩下的类名拼成字符串并重新设置
+        div.className = classNames.join(' ');
     </script>
+
 </head>
 <body>
-
+<div class="bd user disabled"></div>
 </body>
 </html>
