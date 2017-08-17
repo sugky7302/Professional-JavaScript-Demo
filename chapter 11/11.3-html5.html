@@ -62,6 +62,12 @@
         if (documen.readyState == 'complete') {
           //执行操作
         }
+        
+        if (document.compatMode == 'CSS1Compat') {
+          alert('Standars mode');
+        } else {
+          alert('Quirks mode');
+        }
     </script>
 
 </head>
