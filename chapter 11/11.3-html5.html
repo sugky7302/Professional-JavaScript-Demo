@@ -58,6 +58,10 @@
         var button = document.getElementById('myButton');
         button.focus();
         alert(document.hasFocus());		// true
+        
+        if (documen.readyState == 'complete') {
+          //执行操作
+        }
     </script>
 
 </head>
