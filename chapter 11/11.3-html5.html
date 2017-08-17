@@ -31,6 +31,25 @@
         div.className = classNames.join(' ');
         
         div.classList.remove('user');
+        
+        // 删除disabled类
+        div.classList.remove('disabled');
+
+        //添加current类
+        div.classList.add('current');
+
+        //切换user类
+        div.classList.toggle('user');
+
+        //确定元素中是否包含既定的类名
+        if (div.classList.contains('bd') && !div.classList.contains('disabled') ) {
+          // 执行操作
+        }
+
+        // 迭代类名
+        for (var i = 0, len = div.classList.length; i < len; i++){
+          doSomething(div.classList[i]);
+        }
     </script>
 
 </head>
