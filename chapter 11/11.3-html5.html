@@ -75,6 +75,21 @@
         if (document.charset != document.defaultCharset) {
           alert('Custom character set being used');
         }
+        
+        var div = document.getElementById('myDiv');
+
+        //取得自定义属性的值
+        var appId = div.dataset.appId;
+        var myName = div.dataset.myname;
+
+        //设置值
+        div.dataset.appId = 23456;
+        div.dataset.myname = 'tc';
+
+        //有没有myname值呢
+        if (div.dataset.myname) {
+          alert('hello, ' + div.dataset.myname);
+        }
     </script>
 
 </head>
