@@ -71,6 +71,10 @@
         
         alert(document.charset); 	//'UTF-16'
         document.charset = 'UTF-8';
+        
+        if (document.charset != document.defaultCharset) {
+          alert('Custom character set being used');
+        }
     </script>
 
 </head>
