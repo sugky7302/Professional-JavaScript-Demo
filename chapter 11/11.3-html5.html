@@ -106,6 +106,18 @@
 
         //作为后一个同辈元素插入
         element.insertAdjacentHTML('afterend','<p>hello</p>');
+        
+        // 避免下面这样频繁操作
+        for (var i = 0, len = values.length; i < len; i++){
+          ul.innerHTML += '<li>' + values[i] + '</li>';	//每次循环访问两次innerHTML
+        }
+
+        // 更改
+        var itemsHtml = '';
+        for (var i = 0, len = values.length; i < len; i++){
+          itemsHtml += '<li>' + values[i] + '</li>';
+        }
+        ul.innerHTML = itemsHtml;
     </script>
 
 </head>
