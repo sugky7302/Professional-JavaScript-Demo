@@ -94,6 +94,18 @@
         div.innerHTML = 'Hello & welcome, <b>\"reader\"!</b>';
         
         div.outerHTML = '<p>This is a paragraph</p>';
+        
+        //作为前一个同辈元素插入
+        element.insertAdjacentHTML('beforebegin','<p>hello</p>');
+
+        //作为第一个子元素插入
+        element.insertAdjacentHTML('afterbegin','<p>hello</p>');
+
+        //作为最后一个子元素插入
+        element.insertAdjacentHTML('beforeend','<p>hello</p>');
+
+        //作为后一个同辈元素插入
+        element.insertAdjacentHTML('afterend','<p>hello</p>');
     </script>
 
 </head>
