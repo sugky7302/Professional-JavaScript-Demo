@@ -138,5 +138,10 @@
             <li>item 3</li>
         </ul>
     </div>
+
+    <script>
+        var result = document.documentElement.compareDocumentPosition(document.body);
+        console.log(!!(result & 16));
+    </script>
 </body>
 </html>
