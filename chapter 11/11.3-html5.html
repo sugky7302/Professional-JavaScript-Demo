@@ -175,6 +175,15 @@
                 element.innerText = text;
             }
         }
+
+        // 将页面主题滚动5行
+        document.body.scrollByLines(5);
+
+        // 在当前元素不可见的时候，让它进入浏览器的视口
+        document.images[0].scrollIntoViewIfNeeded();
+
+        // 将页面主体往回滚动1页
+        document.body.scrollByPages(-1);
     </script>
 </body>
 </html>
