@@ -163,6 +163,18 @@
 
         var div = document.getElementById('content');
         console.log(div.innerText);
+
+        function getInnerText(element) {
+            return (typeof element.textContent == 'string') ? element.textContent : element.innerText;
+        }
+
+        function setInnerText(element, text){
+            if (typeof element.textContent == 'string') {
+                element.textConten = text;
+            } else {
+                element.innerText = text;
+            }
+        }
     </script>
 </body>
 </html>
