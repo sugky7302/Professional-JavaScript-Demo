@@ -12,7 +12,10 @@
 
         console.log(document.doctype.publicId);
         console.log(document.doctype.systemId);
-        
+
+        document.body.setUserData('name', 'tc', function () {});
+        var value = document.body.getUserData('name');
+
         var newNode = document.importNode(oldNode, true);	//导入节点及其所有子节点
         document.body.appendChild(newNode);
     </script>
