@@ -12,6 +12,9 @@
 
         console.log(document.doctype.publicId);
         console.log(document.doctype.systemId);
+        
+        var newNode = document.importNode(oldNode, true);	//导入节点及其所有子节点
+        document.body.appendChild(newNode);
     </script>
 </head>
 <body>
