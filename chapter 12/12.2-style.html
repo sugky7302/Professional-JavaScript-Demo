@@ -6,6 +6,9 @@
     <script>
         var supportsDOM2CSS = document.implementation.hasFeature('CSS','2.0');
         var supportsDOM2CSS2 = document.implementation.hasFeature('CSS2','2.0');
+
+        myDiv.style.cssText = 'width: 25px; height: 100px; background: red;';
+        console.log(myDiv.style.cssText);
     </script>
 </head>
 <body>
