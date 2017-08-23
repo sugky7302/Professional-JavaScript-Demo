@@ -9,6 +9,10 @@
 
         myDiv.style.cssText = 'width: 25px; height: 100px; background: red;';
         console.log(myDiv.style.cssText);
+
+        for (var i = 0, len = myDiv.style.length; i < len; i++){
+            console.log(myDiv.style[i]); //或者myDiv.style.item(i);
+        }
     </script>
 </head>
 <body>
