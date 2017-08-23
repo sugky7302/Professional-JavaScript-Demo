@@ -13,6 +13,19 @@
         for (var i = 0, len = myDiv.style.length; i < len; i++){
             console.log(myDiv.style[i]); //或者myDiv.style.item(i);
         }
+
+        var prop, value, i, len;
+        for (i = 0, len = myDiv.style.length; i < len; i++){
+            prop = myDiv.style[i];
+            value = myDiv.style.getPropertyValue(prop);
+            console.log(prop + ':' + value);
+        }
+
+        for (i = 0, len = myDiv.style.length; i < len; i++){
+            prop = myDiv.style[i];
+            value = myDiv.style.getPropertyCSSValue(prop);
+            console.log(prop + ':' + value.cssText + '(' + value.cssValueType + ')');
+        }
     </script>
 </head>
 <body>
