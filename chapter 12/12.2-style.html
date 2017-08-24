@@ -39,7 +39,8 @@
     <div id="myDiv" style="background-color: red; border: 1px solid black"></div>
     <script>
         var myDiv = document.getElementById('myDiv');
-        var computedStyle = document.defaultView.getComputedStyle(myDiv, null);
+        var computedStyle = myDiv.currentStyle;
+//        var computedStyle = document.defaultView.getComputedStyle(myDiv, null);
 
         console.log(computedStyle.background);
         console.log(computedStyle.width);
