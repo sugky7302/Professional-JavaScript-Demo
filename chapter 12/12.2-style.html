@@ -48,6 +48,12 @@
         console.log(computedStyle.border);
 
         var supportsDOM2StyleSheets = document.implementation.hasFeature('StyleSheets','2.0');
+
+        var sheet = null;
+        for (var i = 0, len =document.styleSheets.length; i < len; i++){
+            sheet = document.styleSheets[i];
+            console.log(sheet.href);
+        }
     </script>
 </body>
 </html>
