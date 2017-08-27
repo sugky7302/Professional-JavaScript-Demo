@@ -54,6 +54,14 @@
             sheet = document.styleSheets[i];
             console.log(sheet.href);
         }
+
+        function getStyleSheet(element) {
+            return element.sheet || element.styleSheet;
+        }
+
+        //取得第一个<link/>元素引入的样式表
+        var link = document.getElementsByTagName('link')[0];
+        var sheet = getStyleSheet(link);
     </script>
 </body>
 </html>
