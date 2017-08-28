@@ -77,7 +77,9 @@
         console.log(rule.style.width);
         console.log(rule.style.height);
 
-        rule.style.backgroundColor = 'red'
+        rule.style.backgroundColor = 'red';
+
+        sheet.insertRule('body {background-color: red;}', 0);
     </script>
 </body>
 </html>
