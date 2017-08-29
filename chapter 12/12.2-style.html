@@ -81,6 +81,14 @@
 
         sheet.insertRule('body {background-color: red;}', 0);
         sheet.addRule('body','background-color:silver',0);
+
+        function insertRule(sheet, selectorText, cssText, position) {
+          if (sheet.insertRule) {
+              sheet.insertRule(selectorText + '{' + cssText + '}', position);
+          } else if (sheet.addRule){
+              sheet.addRule(selectorText, cssText, position);
+          }
+        }
     </script>
 </body>
 </html>
