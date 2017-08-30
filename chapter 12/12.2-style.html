@@ -92,6 +92,29 @@
 
         sheet.deleteRule(0);
         sheet.removeRule(0);
+
+        function getElementLeft(element) {
+            var actualLeft = elemnet.offsetLeft;
+            var current = element.offsetParent;
+
+            while (current != null){
+                actualLeft += current.offsetLeft;
+                current = current.offsetParent;
+            }
+
+            return actualLeft;
+        }
+
+        function getElementTop(element) {
+            var actualTop = element.offsetTop;
+            var current = element.offsetParent;
+            while (current !== null){
+                actualTop += current.offsetTop;
+                current = current.offsetParent;
+            }
+
+            return actualTop;
+        }
     </script>
 </body>
 </html>
