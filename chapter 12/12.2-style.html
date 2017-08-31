@@ -132,6 +132,12 @@
 
         var docHeight = Math.max(document.documentElement.scrollHeight,document.documentElement.clientHeight);
         var docWidth = Math.max(document.documentElement.scrollWidth,document.documentElement.clientWidth);
+
+        function scrollToTop(element) {
+            if (element.screenTop != 0){
+                element.screenTop = 0;
+            }
+        }
     </script>
 </body>
 </html>
