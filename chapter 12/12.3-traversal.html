@@ -4,10 +4,40 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <script>
+        var supportsTraversals = document.implementation.hasFeature('Traversal', '2.0');
+        var supportsNodeIterator = (typeof document.createNodeIterator == 'function');
+        var supportsTreeWalker = (typeof document.createTreeWalker == 'function');
+
+        var filter = {
+            acceptNode: function (node) {
+                return node.tagName.toLowerCase() == 'p' ?
+                    NodeFilter.FIlter_ACCEPT:
+                    NodeFilter.FILTER_SKIP;
+            }
+        };
+
+        var iterator = document.createNodeIterator(root, NodeFilter.SHOW_ELEMENT, filter, false);
+
 
     </script>
 </head>
 <body>
-
+<div id="div1">
+    <p><b>hello</b> world</p>
+    <ul>
+        <li>list item1</li>
+        <li>list item2</li>
+        <li>list item3</li>
+    </ul>
+</div>
+<script>
+    var div = document.getElementById('div1');
+    var iterator = document.createNodeIterator(div, NodeFilter.SHOW_ELEMENT, null, false);
+    var node = iterator.nextNode();
+    while (node != null){
+        console.log(node.tagName);
+        node = iterator.nextNode();
+    }
+</script>
 </body>
 </html>
