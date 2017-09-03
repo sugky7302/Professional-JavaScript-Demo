@@ -53,6 +53,18 @@
         console.log(node.tagName);
         node = iterator.nextNode();
     }
+
+    var div = document.getElementById('div1');
+    var walker = document.createTreeWalker(div, NodeFilter.SHOW_ELEMENT, null, false);
+
+    walker.firstChild();    // 转到<p>
+    walker.nextSibling();   // 转到<ul>
+
+    var node = walker.firstChild(); // 转到第一个<li>
+    while (node !== null){
+        console.log(node.tagName);
+        node = walker.nextSibling();
+    }
 </script>
 </body>
 </html>
