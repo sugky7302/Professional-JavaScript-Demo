@@ -6,7 +6,8 @@
 </head>
 <body>
 <script>
-
+    var supportsRange = document.implementation.hasFeature('Range', '2.0');
+    var alsoSupportsRange = (typeof document.createRange == 'function');
 </script>
 </body>
 </html>
