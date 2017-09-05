@@ -5,11 +5,18 @@
     <title>Title</title>
 </head>
 <body>
+<p id="p1"><b>hello</b>world</p>
 <script>
     var supportsRange = document.implementation.hasFeature('Range', '2.0');
     var alsoSupportsRange = (typeof document.createRange == 'function');
 
     var range = document.createRange();
+
+    var range1 = document.createRange(),
+        range2 = document.createRange(),
+        p1 = document.getElementById('p1');
+    range1.selectNode(p1);
+    range2.selectNodeContents(p1);
 </script>
 </body>
 </html>
