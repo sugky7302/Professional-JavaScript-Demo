@@ -40,6 +40,9 @@
         helloNode = p1.firstChild.firstChild,
         worldNode = p1.lastChild;
 
+    var range = document.createRange();
+    range.setStart(helloNode, 2);
+    range.setEnd(worldNode, 3);
 </script>
 </body>
 </html>
