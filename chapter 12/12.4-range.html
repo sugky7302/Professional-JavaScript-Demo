@@ -44,7 +44,9 @@
     range.setStart(helloNode, 2);
     range.setEnd(worldNode, 3);
 
-    range.deleteContents();
+//    range.deleteContents();
+    var fragment = range.extractContents();
+    p1.parentNode.appendChild(fragment);
 </script>
 </body>
 </html>
