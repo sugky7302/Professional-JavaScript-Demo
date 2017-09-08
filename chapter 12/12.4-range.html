@@ -47,6 +47,9 @@
 //    range.deleteContents();
     var fragment = range.extractContents();
     p1.parentNode.appendChild(fragment);
+
+    var fragment = range.cloneContents();
+    p1.parentNode.appendChild(fragment);
 </script>
 </body>
 </html>
