@@ -50,6 +50,11 @@
 
     var fragment = range.cloneContents();
     p1.parentNode.appendChild(fragment);
+
+    var span = document.createElement('span');
+    span.style.color = 'red';
+    span.appendChild(document.createTextNode('Inserted text'));
+    range.insertNode(span);
 </script>
 </body>
 </html>
