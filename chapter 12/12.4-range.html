@@ -65,6 +65,9 @@
     console.log(range.collapsed);   //输出true
 
     var newRange = range.cloneRange();
+
+    range.detach();
+    range = null;
 </script>
 </body>
 </html>
