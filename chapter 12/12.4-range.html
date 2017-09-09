@@ -55,6 +55,11 @@
     span.style.color = 'red';
     span.appendChild(document.createTextNode('Inserted text'));
     range.insertNode(span);
+
+    range.selectNode(helloNode);
+    var span = document.createElement('span');
+    span.style.backgroundColor = 'yellow';
+    range.surroundContents(span);
 </script>
 </body>
 </html>
