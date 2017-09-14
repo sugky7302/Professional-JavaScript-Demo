@@ -30,7 +30,11 @@
     var btn = document.getElementById('mtBtn');
     btn.onclick = function () {
         alert('clicked');
-    }
+    };
+
+    btn.onclick = function () {
+        alert(this.id);
+    };
 </script>
 </body>
 </html>
