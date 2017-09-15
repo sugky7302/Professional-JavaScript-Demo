@@ -37,6 +37,14 @@
     };
 
     btn.onclick = null;
+
+    btn.addEventListener('click', function () {
+        alert(this.id);
+    },false);
+
+    btn.addEventListener('click',function () {
+        alert('hello');
+    },false)
 </script>
 </body>
 </html>
