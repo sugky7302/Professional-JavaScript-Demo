@@ -50,6 +50,12 @@
         alert(this.id);
     },false);
 
+    var handle = function () {
+        alert(this.id);
+    };
+
+    btn.addEventListener('click', handle, false);
+    btn.removeEventListener('click', handle, false);
 </script>
 </body>
 </html>
