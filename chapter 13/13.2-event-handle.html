@@ -44,7 +44,12 @@
 
     btn.addEventListener('click',function () {
         alert('hello');
-    },false)
+    },false);
+
+    btn.removeEventListener('click',function () {
+        alert(this.id);
+    },false);
+
 </script>
 </body>
 </html>
