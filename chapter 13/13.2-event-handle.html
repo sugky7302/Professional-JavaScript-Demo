@@ -104,6 +104,11 @@
     btn.addEventListener('click', function (event) {
         alert(event.type);
     }, false);
+
+    btn.onclick = function (event) {
+        alert(event.currentTarget === this);
+        alert(event.target === this);
+    };
 </script>
 </body>
 </html>
