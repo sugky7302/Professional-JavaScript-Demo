@@ -115,6 +115,26 @@
         alert(this === document.body);
         alert(event.target === document.getElementById('myBtn'));
     };
+    
+    var handler = function (event) {
+        switch (event.type){
+            case 'click':
+                alert('clicked');
+                break;
+
+            case 'mouseover':
+                event.target.style.backgroundColor = 'red';
+                break;
+
+            case 'mouseout':
+                event.target.style.backgroundColor = ' ';
+                break;
+        }
+    };
+
+    btn.onclick = handler;
+    btn.onmousemove = handler;
+    btn.onmouseout = handler;
 </script>
 </body>
 </html>
