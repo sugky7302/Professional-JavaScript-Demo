@@ -56,6 +56,10 @@
 
     btn.addEventListener('click', handle, false);
     btn.removeEventListener('click', handle, false);
+
+    btn.attachEvent('onclick', function () {
+        alert('clicked');
+    });
 </script>
 </body>
 </html>
