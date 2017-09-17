@@ -60,6 +60,10 @@
     btn.attachEvent('onclick', function () {
         alert('clicked');
     });
+
+    btn.attachEvent('onclick', function () {
+        alert(this === window);
+    });
 </script>
 </body>
 </html>
