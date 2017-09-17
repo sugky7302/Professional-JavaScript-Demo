@@ -95,6 +95,13 @@
     };
     EventUtil.addHandler(btn, 'click', handler);
     EventUtil.removeHandler(btn, 'click', handler);
+
+    btn.onclick = function (event) {
+        alert(event.type);
+    };
+    btn.addEventListener('click', function (event) {
+        alert(event.type);
+    }, false);
 </script>
 </body>
 </html>
