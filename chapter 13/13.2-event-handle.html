@@ -89,6 +89,12 @@
             }
         }
     };
+
+    var handler = function () {
+        alert('clicked');
+    };
+    EventUtil.addHandler(btn, 'click', handler);
+    EventUtil.removeHandler(btn, 'click', handler);
 </script>
 </body>
 </html>
