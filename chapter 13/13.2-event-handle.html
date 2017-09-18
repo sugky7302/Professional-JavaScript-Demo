@@ -139,7 +139,16 @@
     var link = document.getElementById('myLink');
     link.onclick = function (event) {
         event.preventDefault();
-    }
+    };
+
+    btn.onclick = function (event) {
+        alert('clicked');
+        event.stopPropagation();
+    };
+
+    document.body.onclick = function (event) {
+        alert('body clicked');
+    };
 </script>
 </body>
 </html>
