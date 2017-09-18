@@ -135,6 +135,11 @@
     btn.onclick = handler;
     btn.onmousemove = handler;
     btn.onmouseout = handler;
+
+    var link = document.getElementById('myLink');
+    link.onclick = function (event) {
+        event.preventDefault();
+    }
 </script>
 </body>
 </html>
