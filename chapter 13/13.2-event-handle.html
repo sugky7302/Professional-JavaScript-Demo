@@ -149,6 +149,16 @@
     document.body.onclick = function (event) {
         alert('body clicked');
     };
+
+    btn.onclick = function (event) {
+        alert(event.eventPhase);    //2
+    };
+    document.body.addEventListener('click', function (event) {
+        alert(event.eventPhase);    //1
+    },true);
+    document.body.onclick = function (event) {
+        alert(event.eventPhase);    //3
+    };
 </script>
 </body>
 </html>
