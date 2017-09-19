@@ -168,6 +168,11 @@
     btn.attachEvent('onclick', function (event) {
         alert(event.type);
     });
+
+    btn.onclick = function () {
+        alert(window.event.srcElement === this);
+    };
+
 </script>
 </body>
 </html>
