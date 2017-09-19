@@ -163,7 +163,11 @@
     btn.onclick = function () {
         var event = window.event;
         alert(event.type);
-    }
+    };
+
+    btn.attachEvent('onclick', function (event) {
+        alert(event.type);
+    });
 </script>
 </body>
 </html>
