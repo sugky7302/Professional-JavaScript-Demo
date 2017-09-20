@@ -180,6 +180,11 @@
     link.onclick = function () {
         window.event.returnValue = false;
     };
+
+    btn.onclick = function () {
+        alert('clicked');
+        window.event.cancelBubble = true;
+    };
 </script>
 </body>
 </html>
