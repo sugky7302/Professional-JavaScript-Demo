@@ -176,6 +176,10 @@
     btn.attachEvent('onclick', function (event) {
         alert(event.srcElement === this);
     });
+
+    link.onclick = function () {
+        window.event.returnValue = false;
+    };
 </script>
 </body>
 </html>
