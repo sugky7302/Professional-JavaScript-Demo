@@ -185,6 +185,10 @@
         alert('clicked');
         window.event.cancelBubble = true;
     };
+
+    document.body.onclick = function () {
+        alert('body clicked');
+    };
 </script>
 </body>
 </html>
