@@ -242,6 +242,10 @@
         EventUtil.stopPropagation(event);
     };
 
+    document.body.onclick = function (event) {
+       alert('body clicked');
+    };
+
     link.onclick = function (event) {
         event = EventUtil.getEvent(event);
         EventUtil.preventDefault(event);
