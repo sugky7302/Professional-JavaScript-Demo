@@ -240,6 +240,11 @@
         event = EventUtil.getEvent(event);
         var target = EventUtil.getTarget(event);
     };
+
+    link.onclick = function (event) {
+        event = EventUtil.getEvent(event);
+        EventUtil.preventDefault(event);
+    };
 </script>
 </body>
 </html>
