@@ -89,6 +89,10 @@
         script.src = 'example.js';
         document.body.appendChild(script);
     });
+
+    EventUtil.addHandler(window, 'unload', function (event) {
+        alert('unloaded');
+    });
 </script>
 </body>
 </html>
