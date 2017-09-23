@@ -93,6 +93,10 @@
     EventUtil.addHandler(window, 'unload', function (event) {
         alert('unloaded');
     });
+
+    EventUtil.addHandler(window, 'resize', function (event) {
+        alert('Resized');
+    });
 </script>
 </body>
 </html>
