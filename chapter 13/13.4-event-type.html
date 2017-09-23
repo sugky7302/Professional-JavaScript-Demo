@@ -72,6 +72,14 @@
         document.body.appendChild(image);
         image.src = 'smile.gif';
     });
+
+    EventUtil.addHandler(window, 'load', function () {
+        var image = new Image();
+        EventUtil.addHandler(image, 'load', function (event) {
+            alert('Image loaded');
+        });
+        image.src = 'smile.gif';
+    });
 </script>
 </body>
 </html>
