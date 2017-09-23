@@ -62,6 +62,16 @@
         event = EventUtil.getEvent(event);
         alert(EventUtil.getTarget(event).src);
     });
+
+    EventUtil.addHandler(window, 'load', function () {
+        var image = document.getElementById('img');
+        EventUtil.addHandler(image, 'load', function (event) {
+            event = EventUtil.getEvent(event);
+            alert(EventUtil.getTarget(event).src);
+        });
+        document.body.appendChild(image);
+        image.src = 'smile.gif';
+    });
 </script>
 </body>
 </html>
