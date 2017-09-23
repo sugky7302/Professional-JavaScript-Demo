@@ -80,6 +80,15 @@
         });
         image.src = 'smile.gif';
     });
+
+    EventUtil.addHandler(window, 'load', function () {
+        var script = document.createElement('script');
+        EventUtil.addHandler(script, 'load', function (event) {
+        alert('loaded');
+        });
+        script.src = 'example.js';
+        document.body.appendChild(script);
+    })
 </script>
 </body>
 </html>
