@@ -107,6 +107,12 @@
     });EventUtil.addHandler(window, 'resize', function (event) {
         alert('Resized');
     });
+
+    var div = document.getElementById('myDiv');
+    EventUtil.addHandler(div, 'click', function (event) {
+        event = EventUtil.getEvent(event);
+        alert('client coordinates: ' + event.clientX + ', ' + event.clientY);
+    });
 </script>
 </body>
 </html>
