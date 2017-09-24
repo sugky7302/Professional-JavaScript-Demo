@@ -5,6 +5,7 @@
     <title>Title</title>
 </head>
 <body onload="alert('loaded！')" onunload="alert('Unloaded！')">
+<div id="myDiv" style="background-color: red; height: 100px;width: 100px"></div>
 <img src="smile.gif" alt="img" onload="alert('image loaded')">
 <script>
     var EventUtil = {
@@ -145,7 +146,7 @@
         }
 
         alert('keys: ' + keys.join(','));
-    })
+    });
 </script>
 </body>
 </html>
