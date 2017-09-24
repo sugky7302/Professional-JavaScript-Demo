@@ -113,6 +113,11 @@
         event = EventUtil.getEvent(event);
         alert('client coordinates: ' + event.clientX + ', ' + event.clientY);
     });
+
+    EventUtil.addHandler(div, 'click', function (event) {
+        event = EventUtil.getEvent(event);
+        alert('page coordinates: ' + event.pageX + ', ' + event.pageY);
+    });
 </script>
 </body>
 </html>
