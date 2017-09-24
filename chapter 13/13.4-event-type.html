@@ -204,10 +204,18 @@
         event = EventUtil.getEvent(event);
         alert(event.keyCode);
     });
-    
+
     EventUtil.addHandler(textbox, 'keypress', function (event) {
         event = EventUtil.getEvent(event);
         alert(EventUtil.getCharCode(event));
+    });
+
+    EventUtil.addHandler(textbox, 'keypress', function (event) {
+        event = EventUtil.getEvent(event);
+        var identifier = event.key || event.keyIdentifier;
+        if (identifier){
+            alert(identifier);
+        }
     });
 </script>
 </body>
