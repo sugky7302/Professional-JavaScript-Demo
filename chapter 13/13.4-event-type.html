@@ -225,6 +225,13 @@
             alert(loc);
         }
     });
+
+    EventUtil.addHandler(textbox, 'keypress', function (event) {
+        event = EventUtil.getEvent(event);
+        if (event.getModifierState){
+            alert(event.getModifierState('Shift'));
+        }
+    });
 </script>
 </body>
 </html>
