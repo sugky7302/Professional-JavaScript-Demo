@@ -217,6 +217,14 @@
             alert(identifier);
         }
     });
+
+    EventUtil.addHandler(textbox, 'keypress', function (event) {
+        event = EventUtil.getEvent(event);
+        var loc = event.location || event.keyLocation;
+        if (loc){
+            alert(loc);
+        }
+    });
 </script>
 </body>
 </html>
