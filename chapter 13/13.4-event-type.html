@@ -307,6 +307,10 @@
             menu.style.top = event.clientY + 'px';
             menu.style.visibility = 'visible';
         });
+
+        EventUtil.addHandler(document, 'click', function (event) {
+            document.getElementById('myMenu').style.visibility = 'hidden';
+        })
     });
 </script>
 </body>
