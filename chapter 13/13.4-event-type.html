@@ -319,6 +319,10 @@
         event.returnValue = message;
         return message;
     });
+
+    EventUtil.addHandler(document, 'DOMContentLoaded', function (event) {
+        alert('content loaded');
+    });
 </script>
 </body>
 </html>
