@@ -323,6 +323,12 @@
     EventUtil.addHandler(document, 'DOMContentLoaded', function (event) {
         alert('content loaded');
     });
+
+    EventUtil.addHandler(document, 'readystatechange', function (event) {
+        if (document.readyState == 'interactive'){
+            alert('content loaded');
+        }
+    });
 </script>
 </body>
 </html>
