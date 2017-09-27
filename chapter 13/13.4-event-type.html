@@ -329,6 +329,13 @@
             alert('content loaded');
         }
     });
+
+    EventUtil.addHandler(document, 'readystatechange', function (event) {
+        if (document.readyState == 'interactive' || document.readyState == 'complete'){
+            EventUtil.removeHandler(document, 'readystatechange', arguments.callee);
+            alert('content loaded');
+        }
+    });
 </script>
 </body>
 </html>
