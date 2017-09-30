@@ -387,6 +387,10 @@
        output.innerHTML = 'x= ' + event.x + ', y= ' + event.y + ', z= ' + event.z;
     });
 
+    EventUtil.addHandler(window, 'deviceorientation', function (event) {
+        var output = document.getElementById('output');
+        output.innerHTML = 'alpha= ' + event.alpha + ', beta= ' + event.beta + ', gamma= ' + event.gamma;
+    });
 </script>
 </body>
 </html>
