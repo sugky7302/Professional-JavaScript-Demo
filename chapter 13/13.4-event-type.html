@@ -383,8 +383,10 @@
     });
 
     EventUtil.addHandler(window, 'MozOrientation', function (event) {
-       //响应事件
+       var output = document.getElementById('output');
+       output.innerHTML = 'x= ' + event.x + ', y= ' + event.y + ', z= ' + event.z;
     });
+
 </script>
 </body>
 </html>
