@@ -381,6 +381,10 @@
             div.innerHTML = 'current orientation is ' + window.orientation;
         });
     });
+
+    EventUtil.addHandler(window, 'MozOrientation', function (event) {
+       //响应事件
+    });
 </script>
 </body>
 </html>
