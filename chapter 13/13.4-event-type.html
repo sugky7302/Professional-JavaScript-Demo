@@ -365,9 +365,13 @@
             alert('show has been fired ' + showCount + ' times');
         });
     })();
-    
+
     EventUtil.addHandler(window, 'pagehide',function (event) {
         alert('hide persisted? ' + event.persisted);
+    });
+
+    EventUtil.addHandler(window, 'hashchange', function (event) {
+        alert('Old URL: ' + event.oldURL + '\nNew URL: ' + event.newURL);
     });
 </script>
 </body>
