@@ -373,6 +373,14 @@
     EventUtil.addHandler(window, 'hashchange', function (event) {
         alert('Old URL: ' + event.oldURL + '\nNew URL: ' + event.newURL);
     });
+
+    EventUtil.addHandler(window, 'load', function (event) {
+        var div = document.getElementById('myDiv');
+        div.innerHTML = 'current orientation is ' + window.orientation;
+        EventUtil.addHandler(window, 'orientationchange', function (event) {
+            div.innerHTML = 'current orientation is ' + window.orientation;
+        });
+    });
 </script>
 </body>
 </html>
