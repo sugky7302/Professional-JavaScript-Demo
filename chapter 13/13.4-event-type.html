@@ -365,6 +365,10 @@
             alert('show has been fired ' + showCount + ' times');
         });
     })();
+    
+    EventUtil.addHandler(window, 'pagehide',function (event) {
+        alert('hide persisted? ' + event.persisted);
+    });
 </script>
 </body>
 </html>
