@@ -391,6 +391,11 @@
         var output = document.getElementById('output');
         output.innerHTML = 'alpha= ' + event.alpha + ', beta= ' + event.beta + ', gamma= ' + event.gamma;
     });
+
+    EventUtil.addHandler(window, 'deviceorientation', function (event) {
+        var arrow = document.getElementById('arrow');
+        arrow.style.webkitTransform = 'rotate(' + Math.round(event.alpha) + 'deg)';
+    });
 </script>
 </body>
 </html>
