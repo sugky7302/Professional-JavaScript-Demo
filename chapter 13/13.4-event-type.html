@@ -427,6 +427,25 @@
     EventUtil.addHandler(document,'touchstart', handleTouchEvent);
     EventUtil.addHandler(document, 'touchend', handleTouchEvent);
     EventUtil.addHandler(document, 'touchmove', handleTouchEvent);
+
+    function handleGestureEvent(event) {
+        var output = document.getElementById('output');
+        switch (event.type){
+            case 'gesturestart':
+                output.innerHTML = 'gesture started (rotation=' + event.rotation + ',scale=' + event.scale + ')';
+                break;
+            case 'gestureend':
+                output.innerHTML = '<br>gesture ended (rotation=' + event.rotation + ',scale=' + event.scale + ')';
+                break;
+            case 'gesturechange':
+                output.innerHTML = '<br>gesture changed (rotation=' + event.rotation + ',scale=' + event.scale + ')';
+                break;
+        }
+    }
+
+    document.addEventListener('gesturestart', handleGestureEvent,false);
+    document.addEventListener('gestureend',handleGestureEvent,false);
+    document.addEventListener('gesturechange',handleGestureEvent,false);
 </script>
 </body>
 </html>
