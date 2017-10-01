@@ -423,6 +423,10 @@
             }
         }
     }
+
+    EventUtil.addHandler(document,'touchstart', handleTouchEvent);
+    EventUtil.addHandler(document, 'touchend', handleTouchEvent);
+    EventUtil.addHandler(document, 'touchmove', handleTouchEvent);
 </script>
 </body>
 </html>
