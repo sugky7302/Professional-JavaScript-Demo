@@ -403,6 +403,26 @@
             output.innerHTML = 'alpha= ' + event.rotationRate.alpha + ', beta= ' + event.rotationRate.beta + ', gamma= ' + event.rotationRate.gamma;
         }
     });
+
+    function handleTouchEvent(event) {
+
+        //只跟踪一次触摸
+        if (event.touches.length == 1){
+            var output = document.getElementById('output');
+            switch (event.type){
+                case 'touchstart':
+                    output.innerHTML = 'touch started (' + event.touches[0].clientX + ',' + event.touches[0].clientY + ')';
+                    break;
+                case 'touchend':
+                    output.innerHTML = '<br>touch ended (' + event.changeTouches[0].clientX + ',' + event.changeTouches[0].clientY + ')';
+                    break;
+                case 'touchmove':
+                    event.preventDefault();     //阻止滚动
+                    output.innerHTML = '<br>touch moved (' + event.changeTouches[0].clientX + ',' + event.changeTouches[0].clientY + ')';
+                    break;
+            }
+        }
+    }
 </script>
 </body>
 </html>
