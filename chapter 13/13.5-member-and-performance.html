@@ -112,8 +112,9 @@
     btn.onclick = function () {
         //先执行某些操作
 
+        btn.onclick = null;     //移除事件处理程序
         document.getElementById('myDIv').innerHTML = 'processing...'
-    }
+    };
 </script>
 </body>
 </html>
