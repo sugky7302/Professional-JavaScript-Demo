@@ -153,7 +153,7 @@
 
     //创建事件对象
     var event = document.createEvent('Events');
-    
+
     //初始化事件对象
     event.initEvent(type, bubbles, cancelable);
     event.view = document.defaultView;
@@ -166,6 +166,10 @@
 
     //触发事件
     textbox.dispatchEvent(event);
+
+    var event = document.createEvent('MutationEvents');
+    event.initMutationEvent('DOMNodeInserted', true, false, someNode, '', '', '', 0);
+    target.dispatchEvent(event);
 </script>
 </body>
 </html>
