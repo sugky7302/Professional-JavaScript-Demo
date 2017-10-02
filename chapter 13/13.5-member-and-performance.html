@@ -170,6 +170,27 @@
     var event = document.createEvent('MutationEvents');
     event.initMutationEvent('DOMNodeInserted', true, false, someNode, '', '', '', 0);
     target.dispatchEvent(event);
+
+    var event = document.createEvent('HTMLEvents');
+    event.initEvent('focus', true, false);
+    target.dispatchEvent(event);
+
+    var div = document.getElementById('myDiv'),
+        event;
+
+    EventUtil.addHandler(div, 'myevent', function (event) {
+        alert('DIV: ' + event.detail);
+    });
+
+    EventUtil.addHandler(document, 'myevent', function (event) {
+        alert('DOCUMENT: ' + event.detail);
+    });
+
+    if (document.implementation.hasFeature('CustomEvents', '3.0')){
+        event = document.createEvent('CustomEvent');
+        event.initCustomEvent('myevent', true, false, 'hello');
+        div.dispatchEvent(event);
+    }
 </script>
 </body>
 </html>
