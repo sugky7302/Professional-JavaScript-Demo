@@ -138,6 +138,18 @@
 
     //触发事件
     textbox.dispatchEvent(event);
+
+    //只适用Firefox
+    var textbox = document.getElementById('myTextbox');
+
+    //创建事件对象
+    var event = document.createEvent('KeyEvents');
+
+    //初始化事件对象
+    event.initKeyEvent('keypress', true, true, document.defaultView, false, false, false, false, 65, 65);
+
+    //触发事件
+    textbox.dispatchEvent(event);
 </script>
 </body>
 </html>
