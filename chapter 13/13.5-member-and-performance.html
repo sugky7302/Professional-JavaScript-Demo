@@ -124,6 +124,20 @@
 
     //触发事件
     btn.dispatchEvent(event);
+
+    var textbox = document.getElementById('myTextbox'),
+        event;
+
+    //以DOM3级方式创建事件对象
+    if (document.implementation.hasFeature('keyboardEvents', '3.0')){
+        event = document.createEventObject('keyboradEvent');
+
+        //初始化事件对象
+        event.initKeyboardEvent('keydown', true, true, document.defaultView, 'a', 0, 'shift', 0);
+    }
+
+    //触发事件
+    textbox.dispatchEvent(event);
 </script>
 </body>
 </html>
