@@ -18,6 +18,87 @@
     var firstForm = document.forms[0];  // 取得页面中的第一个表单
     var myForm = document.forms['form2']; //取得页面中名为form2的表单
 
+    var EventUtil = {
+        addHandler: function (element, type, handler) {
+            if (element.addEventListener){
+                element.addEventListener(type, handler, false);
+            }else if (element.attachEvent){
+                element.attachEvent('on'+type, handler);
+            }else {
+                element['on' + type] = handler;
+            }
+        },
+
+        removeHandler: function (element, type, handler) {
+            if (element.removeEventListener){
+                element.removeEventListener(type, handler, false);
+            }else if (element.detachEvent){
+                element.detachEvent('on' + type, handler);
+            }else {
+                element['on' + type] = null;
+            }
+        },
+
+        getEvent: function (event) {
+            return event?event : window.event;
+        },
+
+        getTarget: function (event) {
+            return event.target || event.srcElement;
+        },
+
+        preventDefault: function (event) {
+            if (event.preventDefault){
+                event.preventDefault();
+            }else {
+                event.returnValue = false;
+            }
+        },
+
+        stopPropagation: function (event) {
+            if (event.stopPropagation){
+                event.stopPropagation();
+            }else {
+                event.cancelBubble = true;
+            }
+        },
+
+        getRelatedTarget: function (event) {
+            if (event.relatedTarget){
+                return event.relatedTarget;
+            }else if (event.toElement){
+                return event.toElement;
+            }else if (event.fromElement){
+                return event.fromElement;
+            }else {
+                return null;
+            }
+        },
+
+        getWheelDelta: function (event) {
+            if (event.wheelDelta){
+                return (client.engine.opera && client.engine.opera < 9.5? -event.wheelDelta : event.wheelDelta);
+            }else {
+                return -event.detail * 40;
+            }
+        },
+
+        getCharCode: function (event) {
+            if (typeof event.charCode == 'number'){
+                return event.charCode;
+            }else {
+                return event.keyCode;
+            }
+        }
+    };
+
+    EventUtil.addHandler(form, 'submit', function (event) {
+        // 取得事件对象
+        event = EventUtil.getEvent(event);
+
+        // 阻止默认事件
+        EventUtil.preventDefault(event);
+    });
 </script>
 </body>
 </html>
