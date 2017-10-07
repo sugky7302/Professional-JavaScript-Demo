@@ -107,6 +107,14 @@
     });
 
     form.submit();
+
+    EventUtil.addHandler(form, 'reset', function (event) {
+        // 取得事件对象
+        event = EventUtil.getEvent(event);
+
+        // 阻止表单重置
+        EventUtil.preventDefault(event);
+    });
 </script>
 </body>
 </html>
