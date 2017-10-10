@@ -117,6 +117,15 @@
     });
 
     form.reset();
+
+    // 取得表单中的第一个字段
+    var field1 = form.elements[0];
+
+    // 取得名为textbox1的字段
+    var field2 = form.elements['textbox1'];
+
+    // 取得表单中包含的字段的数量
+    var fieldCount = form.elements.length;
 </script>
 </body>
 </html>
