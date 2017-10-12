@@ -134,6 +134,13 @@
 
     // 取得表单中包含的字段的数量
     var fieldCount = form.elements.length;
+
+    var colorFields = form.elements['color'];
+    alert(colorFields.length);
+
+    var firstColorField = colorFields[0];
+    var firstFormField = form.elements[0];
+    alert(firstColorField === firstFormField);
 </script>
 </body>
 </html>
