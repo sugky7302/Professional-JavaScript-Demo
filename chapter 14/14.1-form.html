@@ -141,6 +141,23 @@
     var firstColorField = colorFields[0];
     var firstFormField = form.elements[0];
     alert(firstColorField === firstFormField);
+
+    var field = form.elements[0];
+
+    //修改value属性
+    field.value = 'Another Value';
+
+    //检查form属性的值
+    alert(field.form === form);
+
+    //把焦点设置到当前字段
+    field.focus();
+
+    //禁用当前字段
+    field.disabled = true;
+
+    //修改type属性（不推荐，但对<input>来说是可行的）
+    field.type = 'checkbox';
 </script>
 </body>
 </html>
