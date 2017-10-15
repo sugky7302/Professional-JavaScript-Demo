@@ -170,6 +170,10 @@
         //禁用它
         btn.disabled = true;
     });
+
+    EventUtil.addHandler(window, 'load', function (event) {
+        document.forms[0].elements[0].focus();
+    });
 </script>
 </body>
 </html>
