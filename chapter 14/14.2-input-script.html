@@ -9,7 +9,10 @@
 
 <textarea cols="5" rows="25">initial value</textarea>
 <script>
+var textbox = document.forms[0].elements['textbox1'];
+console.log(textbox.value);
 
+textbox.value = 'some new value';
 </script>
 </body>
 </html>
