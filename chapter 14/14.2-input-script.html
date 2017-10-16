@@ -104,6 +104,10 @@
     EventUtil.addHandler(textbox, 'select', function (event) {
         console.log('Text selected ' + textbox.value);
     });
+
+    function getSelectedText(textbox) {
+        return textbox.value.substring(textbox.selectionStart, textbox.selectionEnd);
+    }
 </script>
 </body>
 </html>
