@@ -130,7 +130,7 @@
         var target = EventUtil.getTarget(event);
         var charCode = EventUtil.getCharCode(event);
 
-        if (!/\d/.test(String.fromCharCode(charCode))){
+        if (!/\d/.test(String.fromCharCode(charCode)) && charCode > 9 && !event.ctrlKey){
             EventUtil.preventDefault(event);
         }
     });
