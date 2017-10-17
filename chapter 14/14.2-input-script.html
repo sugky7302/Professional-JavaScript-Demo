@@ -119,6 +119,11 @@
 
     //选择第4到第6个字符
     textbox.setSelectionRange(4, 7);    //o w
+
+    EventUtil.addHandler(textbox, 'keypress', function (event) {
+        event = EventUtil.getEvent(event);
+        EventUtil.preventDefault(event);
+    });
 </script>
 </body>
 </html>
