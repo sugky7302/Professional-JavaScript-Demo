@@ -192,6 +192,8 @@
     })();
 
         var isUsernameRequired = document.forms[0].elements['username'].required;
+
+        var isRequiredSupported = 'required' in document.createElement('input');
 </script>
 </body>
 </html>
