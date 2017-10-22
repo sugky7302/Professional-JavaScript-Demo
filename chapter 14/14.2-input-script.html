@@ -227,6 +227,16 @@
     }else {
         // 字段无效
     }
+
+    if (input.validity && !input.validity.valid){
+        if (input.validity.valueMissing){
+            console.log('please specify a value');
+        }else if (input.validity.typeMismatch){
+            console.log('please enter an email address');
+        }else {
+            console.log('value is invalid');
+        }
+    }
 </script>
 </body>
 </html>
