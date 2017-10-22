@@ -99,6 +99,16 @@
             }
         }
     };
+
+    var selectbox = document.forms[0].elements['location'];
+
+    //不推荐
+    var text = selectbox.options[0].firstChild.nodeValue;
+    var value = selectbox.options[0].getAttribute('value');
+
+    //推荐
+    var text = selectbox.options[0].text;
+    var value = selectbox.options[0].value;
 </script>
 </body>
 </html>
