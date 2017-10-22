@@ -214,6 +214,13 @@
 
     var pattern = document.forms[0].elements['count'].pattern;
 
+    var isPatternSupported = 'pattern' in document.createElement('input');
+
+    if (document.forms[0].elements[0].checkValidity()){
+        // 字段有效，继续
+    }else {
+        // 字段无效
+    }
 </script>
 </body>
 </html>
