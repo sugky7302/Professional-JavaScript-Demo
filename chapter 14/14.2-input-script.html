@@ -197,6 +197,11 @@
         var isUsernameRequired = document.forms[0].elements['username'].required;
 
         var isRequiredSupported = 'required' in document.createElement('input');
+
+        var input = document.createElement('input');
+        input.type = 'email';
+
+        var isEmailSupported = (input.type == 'email');
 </script>
 </body>
 </html>
