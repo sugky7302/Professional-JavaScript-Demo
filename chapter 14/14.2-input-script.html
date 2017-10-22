@@ -105,9 +105,9 @@
         },
 
         setClipboardText: function (event, value) {
-            if (event.clipboardData){
+            if (event.clipboardData) {
                 return event.clipboardData.setData('text/plain', value);
-            }else if (window.clipboardData){
+            } else if (window.clipboardData) {
                 return window.clipboardData.setData('text', value);
             }
         }
@@ -156,7 +156,7 @@
         var target = EventUtil.getTarget(event);
         var charCode = EventUtil.getCharCode(event);
 
-        if (!/\d/.test(String.fromCharCode(charCode)) && charCode > 9 && !event.ctrlKey){
+        if (!/\d/.test(String.fromCharCode(charCode)) && charCode > 9 && !event.ctrlKey) {
             EventUtil.preventDefault(event);
         }
     });
@@ -165,7 +165,7 @@
         event = EventUtil.getEvent(event);
         var text = EventUtil.getClipboardText(event);
 
-        if (!/^\d*$/.test(text)){
+        if (!/^\d*$/.test(text)) {
             EventUtil.preventDefault(event);
         }
     });
@@ -175,13 +175,13 @@
             event = EventUtil.getEvent(event);
             var target = EventUtil.getTarget(event);
 
-            if (target.value.length == target.maxLength){
+            if (target.value.length == target.maxLength) {
                 var form = target.form;
 
-                for (var i = 0, len = form.elements.length; i < len; i++){
-                    if (form.elements[i] == target){
-                        if (form.elements[i+1]){
-                            form.elements[i+1].focus();
+                for (var i = 0, len = form.elements.length; i < len; i++) {
+                    if (form.elements[i] == target) {
+                        if (form.elements[i + 1]) {
+                            form.elements[i + 1].focus();
                         }
                         return;
                     }
@@ -198,19 +198,21 @@
         EventUtil.addHandler(textbox3, 'keyup', tabForward);
     })();
 
-        var isUsernameRequired = document.forms[0].elements['username'].required;
+    var isUsernameRequired = document.forms[0].elements['username'].required;
 
-        var isRequiredSupported = 'required' in document.createElement('input');
+    var isRequiredSupported = 'required' in document.createElement('input');
 
-        var input = document.createElement('input');
-        input.type = 'email';
+    var input = document.createElement('input');
+    input.type = 'email';
 
-        var isEmailSupported = (input.type == 'email');
+    var isEmailSupported = (input.type == 'email');
 
-        input.stepUp();     //加1
-        input.stepUp(5);    //加5
-        input.stepDown();   //减1
-        input.stepDown(10); //减10
+    input.stepUp();     //加1
+    input.stepUp(5);    //加5
+    input.stepDown();   //减1
+    input.stepDown(10); //减10
+    
+
 </script>
 </body>
 </html>
