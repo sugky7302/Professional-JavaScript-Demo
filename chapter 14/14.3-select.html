@@ -157,7 +157,9 @@
 
     selectbox.removeChild(selectbox.options[0]);    //移除第一个选项
 
-    selectbox.remove(0)     //移除第一个选项
+    selectbox.remove(0);     //移除第一个选项
+
+    selectbox.options[0] = null;        //移除第一个选项
 </script>
 </body>
 </html>
