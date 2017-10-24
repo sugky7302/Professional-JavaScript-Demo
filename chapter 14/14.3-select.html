@@ -154,6 +154,8 @@
 
     var newOption = new Option('option text', 'option value');
     selectbox.add(newOption, undefined);    //最佳方案
+
+    selectbox.removeChild(selectbox.options[0]);    //移除第一个选项
 </script>
 </body>
 </html>
