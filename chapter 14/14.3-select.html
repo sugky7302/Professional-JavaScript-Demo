@@ -151,6 +151,9 @@
 
     var newOption = new Option('option text', 'option value');
     selectbox.appendChild(newOption);   //IE8及之前版本有问题
+
+    var newOption = new Option('option text', 'option value');
+    selectbox.add(newOption, undefined);    //最佳方案
 </script>
 </body>
 </html>
