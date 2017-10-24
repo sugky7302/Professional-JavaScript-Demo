@@ -160,6 +160,12 @@
     selectbox.remove(0);     //移除第一个选项
 
     selectbox.options[0] = null;        //移除第一个选项
+    
+    function clearSelectbox(selectbox) {
+        for (var i = 0, len = selectbox.options.length; i < len; i++){
+            selectbox.remove(i);
+        }
+    }
 </script>
 </body>
 </html>
