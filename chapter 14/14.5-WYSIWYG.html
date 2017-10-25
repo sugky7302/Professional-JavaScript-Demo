@@ -94,7 +94,9 @@
         }
     };
 
-
+    EventUtil.addHandler(window, 'load', function () {
+        frames['richedit'].document.desginMode = 'on';
+    });
 </script>
 </body>
 </html>
