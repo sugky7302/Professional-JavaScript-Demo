@@ -99,6 +99,9 @@
     EventUtil.addHandler(window, 'load', function () {
         frames['richedit'].document.designMode = 'on';
     });
+
+    var richedit = document.getElementById('richedit');
+    richedit.contentEditable = 'true';
 </script>
 </body>
 </html>
