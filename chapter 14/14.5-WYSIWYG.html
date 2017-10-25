@@ -133,6 +133,20 @@
     var isBold = frames['richedit'].document.queryCommandState('bold');
 
     var fontSize = frames['richedit'].document.queryCommandValue('fontsize');
+
+
+    var selection = frames['richedit'].getSelection();
+
+    //取得选择文本
+    var selectedText = selection.toString();
+
+    //取得代表选区的范围
+    var range = selection.getRangeAt(0);
+
+    //突出显示选择的文本
+    var span = frames['richedit'].document.createElement('span');
+    span.style.backgroundColor = 'yellow';
+    range.surroundContents(span);
 </script>
 </body>
 </html>
