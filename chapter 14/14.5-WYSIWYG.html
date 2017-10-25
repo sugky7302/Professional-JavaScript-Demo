@@ -129,6 +129,8 @@
     document.execCommand('formatblock', false, '<h1>');
 
     var result = frames['richedit'].document.queryCommandEnabled('bold');
+
+    var isBold = frames['richedit'].document.queryCommandState('bold');
 </script>
 </body>
 </html>
