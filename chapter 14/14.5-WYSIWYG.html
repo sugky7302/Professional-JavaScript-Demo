@@ -102,6 +102,18 @@
 
     var richedit = document.getElementById('richedit');
     richedit.contentEditable = 'true';
+
+    //转换粗体文本
+    frames['richdeit'].document.execCommand('bold', false, null);
+
+    //转换斜体文本
+    frames['richdeit'].document.execCommand('italic', false, null);
+
+    //创建指向tc9011.com的链接
+    frames['richdeit'].document.execCommand('createlink', false, 'http://tc9011.com');
+
+    //格式化为1级标题
+    frames['richdeit'].document.execCommand('formatblock', false, '<h1>');
 </script>
 </body>
 </html>
