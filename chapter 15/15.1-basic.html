@@ -7,7 +7,12 @@
 <body>
 <canvas id="drawing" width="200" height="200">a drawing of something.</canvas>
 <script>
+    var drawing = document.getElementById('drawing');
 
+    //确定浏览器支持<canvas>
+    if (drawing.getContext){
+        var context = drawing.getContext('2d');
+    }
 </script>
 </body>
 </html>
