@@ -13,16 +13,16 @@
     if (drawing.getContext){
         var context = drawing.getContext('2d');
 
-        //取得图像的数据URL
-//        var imgURL = drawing.toDataURL('image/png');
+/*        //取得图像的数据URL
+        var imgURL = drawing.toDataURL('image/png');
 
         //显示图像
-//        var image = document.createElement('img');
-//        img.src = imgURL;
-//        document.body.appendChild(image);
+        var image = document.createElement('img');
+        img.src = imgURL;
+        document.body.appendChild(image);*/
 
 
-        context.strokeStyle = '#FF0000';
+/*        context.strokeStyle = '#FF0000';
         context.fillStyle = '#0000ff';
 
         //绘制红色矩形
@@ -42,7 +42,7 @@
         context.strokeRect(30,30,50,50);
 
         //在两个矩形重叠的地方清除一个小矩形
-        context.clearRect(40,40,10,10);
+        context.clearRect(40,40,10,10);*/
 
 
         //开始路径
@@ -58,7 +58,7 @@
         //绘制分针
         context.moveTo(100,100);
         context.lineTo(100,15);
-        
+
         //绘制时针
         context.moveTo(100,100);
         context.lineTo(35,100);
