@@ -121,10 +121,11 @@
     context.fillRect(0,0,100,200);  //从点（100，100）开始绘制蓝色矩形
 
     context.restore();
-    context.fillRect(10,10,100,200);
+    context.fillRect(10,10,100,200);    //从点（110， 110）开始绘制绿色矩形
 
     context.restore();
-    context.fillRect(0, 0, 100, 200);
+
+    context.fillRect(0, 0, 100, 200);   //从点（0，0）开始绘制红色矩形
 
     var image = document.images[0];
     context.drawImage(image, 10, 10);
