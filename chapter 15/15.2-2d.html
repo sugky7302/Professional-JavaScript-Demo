@@ -5,6 +5,14 @@
     <title>Title</title>
 </head>
 <body>
+<img src="20161109360612.JPG" alt="img">
+<canvas id="drawing" width="200" height="200">a drawing of something.</canvas>
+<script>
+    var image = document.images[0];
+    var drawing = document.getElementById('drawing');
+    var context = drawing.getContext('2d');
 
+    context.drawImage(image, 0, 10, 50, 50, 0, 100, 40, 60);
+</script>
 </body>
 </html>
