@@ -32,6 +32,14 @@
     var gradient = context.createLinearGradient(30, 30, 70, 70);
     gradient.addColorStop(0, 'white');
     gradient.addColorStop(1, 'black');
+
+    // 绘制红色矩形
+    context.fillStyle = '#ff0000';
+    context.fillRect(10, 10,  50, 50);
+
+    // 绘制渐变矩形
+    context.fillStyle = gradient;
+    context.fillRect(30, 30, 50, 50);
 </script>
 </body>
 </html>
