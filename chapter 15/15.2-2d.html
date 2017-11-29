@@ -5,14 +5,14 @@
     <title>Title</title>
 </head>
 <body>
-<!--<img src="20161109360612.JPG" alt="img">-->
-<canvas id="drawing" width="200" height="200">a drawing of something.</canvas>
+<img width="100" height="100" src="20161109360612.JPG" alt="img">
+<canvas id="drawing" width="960" height="480">a drawing of something.</canvas>
 <script>
-    //    var image = document.images[0];
+    var image = document.images[0];
     var drawing = document.getElementById('drawing');
     var context = drawing.getContext('2d');
 
-    //    context.drawImage(image, 0, 10, 50, 50, 0, 100, 40, 60);
+   /* //    context.drawImage(image, 0, 10, 50, 50, 0, 100, 40, 60);
 
 
     // 设置阴影
@@ -65,7 +65,15 @@
 
     // 绘制渐变矩形
     context.fillStyle = gradient;
-    context.fillRect(30, 30, 50, 50);
+    context.fillRect(30, 30, 50, 50);*/
+
+    var pattern = context.createPattern(image, 'repeat');
+
+    // 绘制矩形
+    context.fillStyle = pattern;
+    context.fillRect(10, 10, 960, 960);
+
+    var imageData = context.getImageData(10, 5, 50, 50);
 </script>
 </body>
 </html>
