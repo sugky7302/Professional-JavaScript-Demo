@@ -74,6 +74,13 @@
     context.fillRect(10, 10, 960, 960);
 
     var imageData = context.getImageData(10, 5, 50, 50);
+
+    var data = imageData.data,
+        red = data[0],
+        green = data[1],
+        blue = data[2],
+        alpha = data[3];
+
 </script>
 </body>
 </html>
