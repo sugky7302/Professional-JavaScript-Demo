@@ -120,6 +120,20 @@
         imageData.data = data;
         context.putImageData(imageData, 0, 0);
     }
+
+    // 绘制红色矩形
+    context.fillStyle = '#ff0000';
+    context.fillRect(10, 10, 50, 50);
+
+    // 修改全局透明度
+    context.globalAlpha = 0.5;
+
+    // 绘制蓝色矩形
+    context.fillStyle = 'rgba(0, 0, 255, 1)';
+    context.fillRect(30, 30, 50, 50);
+
+    // 重置全局透明度
+    context.globalAlpha = 0;
 </script>
 </body>
 </html>
