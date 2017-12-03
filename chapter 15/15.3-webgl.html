@@ -20,6 +20,12 @@
 
     console.log(view.byteOffset);
     console.log(view.byteLength);
+
+    var value;
+
+    view.setUint16(0, 25);
+    view.setUint16(2, 50);  // 不能从字节1开始，因为16位整数要用2B
+    value = view.getUint16(0);
 </script>
 </body>
 </html>
