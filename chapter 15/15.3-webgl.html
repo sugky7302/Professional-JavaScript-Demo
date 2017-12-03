@@ -17,6 +17,9 @@
 
     // 创建一个从字节9开始到字节18的新视图
     var view = new DataView(buffer, 9, 10);
+
+    console.log(view.byteOffset);
+    console.log(view.byteLength);
 </script>
 </body>
 </html>
