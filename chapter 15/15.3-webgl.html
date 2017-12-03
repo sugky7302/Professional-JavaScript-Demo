@@ -27,8 +27,8 @@
     view.setUint16(2, 50);  // 不能从字节1开始，因为16位整数要用2B
     value = view.getUint16(0);
 
-    view.getInt8(0);
-    console.log(value);
+    value = view.getInt8(0);
+    console.log(value); // 0
 </script>
 </body>
 </html>
