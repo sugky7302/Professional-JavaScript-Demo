@@ -32,6 +32,9 @@
 
     // 创建一个新数组，使用整个缓冲器
     var int8s = new Int8Array(buffer);
+
+    // 只使用从字节9开始的缓冲器
+    var  int16s = new Int16Array(buffer, 9);
 </script>
 </body>
 </html>
