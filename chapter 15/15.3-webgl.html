@@ -8,6 +8,15 @@
 <script>
     var buffer = new ArrayBuffer(20);
     var bytes = buffer.byteLength;
+
+    // 基于整个缓冲器创建一个新视图
+    var view = new DataView(buffer);
+
+    // 创建一个开始于字节9的新视图
+    var view = new DataView(buffer, 9);
+
+    // 创建一个从字节9开始到字节18的新视图
+    var view = new DataView(buffer, 9, 10);
 </script>
 </body>
 </html>
