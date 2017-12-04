@@ -42,6 +42,12 @@
     // 使用缓冲器的一部分保存8位整数，而在其他字节中保存16位整数
     var int8s = new Int8Array(buffer, 0, 10);
     var uint16s = new Uint16Array(buffer, 11, 10);
+
+    // 需要10个元素空间
+    var int8s = new Int8Array(buffer, 0, 10 * Int8Array.BYTES_PER_ELEMENT);
+
+    // 需要5个元素空间
+    var uint16s = new Uint16Array(buffer, int8s.byteOffset + int8s.byteLength, 5 * BYTES_PER_ELEMENT);
 </script>
 </body>
 </html>
