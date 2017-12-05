@@ -57,6 +57,10 @@
 
     // 创建一个数组保存5个8位整数（10字节）
     var int8s = new Int8Array([10, 20, 30, 40, 50]);
+
+    for (var i = 0, len = int8s.length; i < len; i++){
+        console.log('Value at position ' + i + ' is ' + int8s[i]);
+    }
 </script>
 </body>
 </html>
