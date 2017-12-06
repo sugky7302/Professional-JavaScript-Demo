@@ -7,7 +7,7 @@
 <body>
 <canvas id="drawing" width="960" height="480"></canvas>
 <script>
-    var buffer = new ArrayBuffer(20);
+    /*var buffer = new ArrayBuffer(20);
     var bytes = buffer.byteLength;
 
     // 基于整个缓冲器创建一个新视图
@@ -64,7 +64,7 @@
     }
 
     var uint16s = new Uint16Array(10),
-        sub = uint16s.subarray(2, 5);
+        sub = uint16s.subarray(2, 5);*/
 
     var drawing = document.getElementById('drawing');
 
@@ -80,6 +80,15 @@
             gl.clear(gl.COLOR_BUFFER_BIT);
 
             gl.viewport(0, 0, drawing.width, drawing.height);
+
+            // 视口是<canvas>左下角的四分之一区域
+            gl.viewport(0, 0, drawing.width/2, drawing.height/2);
+
+            // 视口是<canvas>左上角的四分之一区域
+            gl.viewport(0, drawing.height/2, drawing.width/2, drawing.height/2);
+
+            // 视口是<canvas>右下角的四分之一区域
+            gl.viewport(drawing.width/2, 0, drawing.width/2, drawing.height/2);
         }else {
             console.log('webgl context could not be created');
         }
