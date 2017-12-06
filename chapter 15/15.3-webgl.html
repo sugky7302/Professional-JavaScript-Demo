@@ -5,6 +5,7 @@
     <title>Title</title>
 </head>
 <body>
+<canvas id="drawing" width="960" height="480"></canvas>
 <script>
     var buffer = new ArrayBuffer(20);
     var bytes = buffer.byteLength;
@@ -64,6 +65,16 @@
 
     var uint16s = new Uint16Array(10),
         sub = uint16s.subarray(2, 5);
+
+    var drawing = document.getElementById('drawing');
+
+    // 确定浏览器支持<canvas>元素
+    if (drawing.getContext){
+        var gl = drawing.getContext('webgl');
+        if (gl){
+            // 使用WebGL
+        }
+    }
 </script>
 </body>
 </html>
