@@ -70,7 +70,7 @@
 
     // 确定浏览器支持<canvas>元素
     if (drawing.getContext){
-        var gl = drawing.getContext('webgl');
+        var gl = drawing.getContext('webgl', {alpha: false});
         if (gl){
             // 使用WebGL
         }
