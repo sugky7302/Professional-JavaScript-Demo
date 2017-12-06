@@ -78,6 +78,8 @@
         if (gl){
             gl.clearColor(0, 0, 0, 1);  // black
             gl.clear(gl.COLOR_BUFFER_BIT);
+
+            gl.viewport(0, 0, drawing.width, drawing.height);
         }else {
             console.log('webgl context could not be created');
         }
