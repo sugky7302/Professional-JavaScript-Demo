@@ -187,6 +187,8 @@
 
                 var pixels = new Uint8Array(25*25);
                 gl.readPixels(0, 0, 25, 25, gl.RGBA, gl.UNSIGNED_BYTE, pixels);
+
+                var gl = drawing.getContext('experimental-webgl', {preserveDrawingBuffer: true});
             }
         }else {
             console.log('webgl context could not be created');
