@@ -128,6 +128,8 @@
             gl.attachShader(program, vertexShader);
             gl.attachShader(program, framentShader);
             gl.linkProgram(program);
+
+            gl.useProgram(program);
         }else {
             console.log('webgl context could not be created');
         }
