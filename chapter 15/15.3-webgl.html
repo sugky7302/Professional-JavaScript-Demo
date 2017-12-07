@@ -89,6 +89,10 @@
 
             // 视口是<canvas>右下角的四分之一区域
             gl.viewport(drawing.width/2, 0, drawing.width/2, drawing.height/2);
+
+            var buffer = gl.createBuffer();
+            gl.bindBuffer(gl.ARRAY_BUFFER, buffer);
+            gl.bufferData(gl.ARRAY_BUFFER, new Float32Array([0, 0.5, 1]), gl.STATIC_DRAW);
         }else {
             console.log('webgl context could not be created');
         }
