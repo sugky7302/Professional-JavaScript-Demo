@@ -141,6 +141,10 @@
             if (!gl.getShaderParameter(vertexShader, gl.COMPILE_STATUS)){
                 console.log(gl.getShaderInfoLog(vertexShader));
             }
+
+            if (!gl.getProgramParameter(program, gl.LINK_STATUS)){
+                console.log(gl.getProgramInfoLog(program));
+            }
         }else {
             console.log('webgl context could not be created');
         }
