@@ -136,7 +136,7 @@
 
             var aVertexPosition = gl.getAttribLocation(program, 'aVertexPosition');
             gl.enableVertexAttribArray(aVertexPosition);
-            gl.vertexAttribPointer(aVertexPosition, itemSize, gl.FLOAT, false, 0, 0);
+            // gl.vertexAttribPointer(aVertexPosition, itemSize, gl.FLOAT, false, 0, 0);
 
             if (!gl.getShaderParameter(vertexShader, gl.COMPILE_STATUS)){
                 console.log(gl.getShaderInfoLog(vertexShader));
@@ -145,6 +145,30 @@
             if (!gl.getProgramParameter(program, gl.LINK_STATUS)){
                 console.log(gl.getProgramInfoLog(program));
             }
+
+            // 假设已经使用前面定义的着色器清楚了视口
+            // 定义三个顶点以及每个顶点的x和y坐标
+
+            var vertices = new Float32Array([0, 1, 1, -1, -1, -1]),
+                buffer = gl.createBuffer(),
+                vertexSetSize = 2,
+                vertexSetCount = vertices.length/vertexSetSize,
+                uColor, aVertexPosition;
+
+            // 把数据放到缓冲区
+            gl.bindBuffer(gl.ARRAY_BUFFER, buffer);
+            gl.bufferData(gl.ARRAY_BUFFER, vertices, gl.STATIC_DRAW);
+
+            // 为片段着色器传入颜色值
+            uColor = gl.getUniformLocation(program, 'uColor');
+            gl.uniform4fv(uColor, [0, 0, 0, 1]);
+
+            // 为着色器传入顶点信息
+            aVertexPosition = gl.getAttribLocation(program, 'aVertexPosition');
+            gl.vertexAttribPointer(aVertexPosition, vertexSetSize, gl.FLOAT, false, 0, 0);
+
+            // 绘制三角形
+            gl.drawArrays(gl.TRIANGLES, 0, vertexSetCount);
         }else {
             console.log('webgl context could not be created');
         }
