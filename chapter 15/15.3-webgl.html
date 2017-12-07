@@ -123,6 +123,11 @@
             var framentShader = gl.createShader(gl.FRAGMENT_SHADER);
             gl.shaderSource(framentShader, fragmentGlsl);
             gl.compileShader(framentShader);
+
+            var program = gl.createProgram();
+            gl.attachShader(program, vertexShader);
+            gl.attachShader(program, framentShader);
+            gl.linkProgram(program);
         }else {
             console.log('webgl context could not be created');
         }
