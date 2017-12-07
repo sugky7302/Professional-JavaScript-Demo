@@ -116,6 +116,13 @@
 
             var vertexGlsl = document.getElementById('vertexShader').text,
                 fragmentGlsl = document.getElementById('fragmentShader').text;
+            var vertexShader = gl.createShader(gl.VERTEX_SHADER);
+            gl.shaderSource(vertexShader, vertexGlsl);
+            gl.compileShader(vertexShader);
+
+            var framentShader = gl.createShader(gl.FRAGMENT_SHADER);
+            gl.shaderSource(framentShader, fragmentGlsl);
+            gl.compileShader(framentShader);
         }else {
             console.log('webgl context could not be created');
         }
