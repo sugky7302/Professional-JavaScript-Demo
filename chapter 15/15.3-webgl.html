@@ -133,6 +133,10 @@
 
             var uColor = gl.getUniformLocation(program, 'uColor');
             gl.uniform4fv(uColor, [0, 0, 0, 1]);
+
+            var aVertexPosition = gl.getAttribLocation(program, 'aVertexPosition');
+            gl.enableVertexAttribArray(aVertexPosition);
+            gl.vertexAttribPointer(aVertexPosition, itemSize, gl.FLOAT, false, 0, 0);
         }else {
             console.log('webgl context could not be created');
         }
