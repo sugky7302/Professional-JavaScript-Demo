@@ -6,6 +6,20 @@
 </head>
 <body>
 <canvas id="drawing" width="960" height="480"></canvas>
+<script type="x-webgl/x-vertex-shader" id="vertexShader">
+    attribute vec2 aVertexPosition;
+
+    void main(){
+      gl_Position = vec4(aVertexPosition, 0.0, 1.0);
+    }
+</script>
+<script type="x-webgl/x-fragment-shader" id="fragmentShader">
+    uniform vec4 uColor;
+
+    void main(){
+        gl_FragColor = uColor;
+    }
+</script>
 <script>
     /*var buffer = new ArrayBuffer(20);
     var bytes = buffer.byteLength;
@@ -90,7 +104,7 @@
             // 视口是<canvas>右下角的四分之一区域
             gl.viewport(drawing.width/2, 0, drawing.width/2, drawing.height/2);
 
-            var buffer = gl.createBuffer();
+            /*var buffer = gl.createBuffer();
             gl.bindBuffer(gl.ARRAY_BUFFER, buffer);
             gl.bufferData(gl.ARRAY_BUFFER, new Float32Array([0, 0.5, 1]), gl.STATIC_DRAW);
 
@@ -98,25 +112,13 @@
             while (errorCode){
                 console.log("error occurred: " + errorCode);
                 errorCode = gl.getError();
-            }
+            }*/
+
+            var vertexGlsl = document.getElementById('vertexShader').text,
+                fragmentGlsl = document.getElementById('fragmentShader').text;
         }else {
             console.log('webgl context could not be created');
         }
-    }
-</script>
-
-<script type="x-webgl/x-vertex-shader" id="vertexShader">
-    attribute vec2 aVertexPosition;
-
-    void main(){
-      gl_Position = vec4(aVertexPosition, 0.0, 1.0);
-    }
-</script>
-<script type="x-webgl/x-fragment-shader" id="fragmentShader">
-    uniform vec4 uColor;
-
-    void main(){
-        gl_FragColor = uColor;
     }
 </script>
 </body>
