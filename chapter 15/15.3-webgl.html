@@ -130,6 +130,9 @@
             gl.linkProgram(program);
 
             gl.useProgram(program);
+
+            var uColor = gl.getUniformLocation(program, 'uColor');
+            gl.uniform4fv(uColor, [0, 0, 0, 1]);
         }else {
             console.log('webgl context could not be created');
         }
