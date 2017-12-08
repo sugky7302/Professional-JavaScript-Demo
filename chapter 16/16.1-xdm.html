@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // 注意：所有支持XDM的浏览器也支持iframe的contentWindow属性
+    var iframeWindow = document.getElementById('myframe').contentWindow;
+    iframeWindow.postMessage('A secret', 'http://www.tc9011.com');
+</script>
+</body>
+</html>
