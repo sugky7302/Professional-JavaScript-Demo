@@ -30,8 +30,12 @@
     };
 
     EventUtil.addHandler(droptarget, 'dropover', function (event) {
-        EventUtil.preventDefault();
+        EventUtil.preventDefault(event);
     });
+
+    EventUtil.addHandler(droptarget, 'dragenter', function (event) {
+        EventUtil.preventDefault(event)
+    })
 </script>
 </body>
 </html>
