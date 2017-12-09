@@ -33,11 +33,11 @@
         EventUtil.preventDefault(event);
 
         // 设置和接收文本数据
-        event.dataTransfer.setData('text', 'some text');
+        event.dataTransfer.setData('text/plain', 'some text');
         var text = event.dataTransfer.getData('text');
 
         // 设置和接收URL
-        event.dataTransfer.setData('URL', 'http:// wwww.tc9011.com/');
+        event.dataTransfer.setData('text/uri-list', 'http:// wwww.tc9011.com/');
         var url = event.dataTransfer.getData('URL');
     });
 
