@@ -18,8 +18,20 @@
             }else {
                 element['on' + type] = handler;
             }
+        },
+
+        preventDefault: function (event) {
+            if (event.preventDefault){
+                event.preventDefault();
+            }else {
+                event.returnValue = false;
+            }
         }
     };
+
+    EventUtil.addHandler(droptarget, 'dropover', function (event) {
+        EventUtil.preventDefault();
+    });
 </script>
 </body>
 </html>
