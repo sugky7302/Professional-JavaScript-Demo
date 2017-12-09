@@ -35,7 +35,11 @@
 
     EventUtil.addHandler(droptarget, 'dragenter', function (event) {
         EventUtil.preventDefault(event)
-    })
+    });
+
+    EventUtil.addHandler(droptarget, 'drop', function (event) {
+        EventUtil.preventDefault(event);
+    });
 </script>
 </body>
 </html>
