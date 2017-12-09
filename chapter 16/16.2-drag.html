@@ -29,9 +29,7 @@
         }
     };
 
-    EventUtil.addHandler(droptarget, 'dropover', function (event) {
-        EventUtil.preventDefault(event);
-
+    EventUtil.addHandler(droptarget, 'dropstart', function (event) {
         // 设置和接收文本数据
         event.dataTransfer.setData('text/plain', 'some text');
         var text = event.dataTransfer.getData('text');
@@ -39,6 +37,10 @@
         // 设置和接收URL
         event.dataTransfer.setData('text/uri-list', 'http:// wwww.tc9011.com/');
         var url = event.dataTransfer.getData('URL');
+    });
+
+    EventUtil.addHandler(droptarget, 'dropover', function (event) {
+        EventUtil.preventDefault(event);
     });
 
     EventUtil.addHandler(droptarget, 'dragenter', function (event) {
