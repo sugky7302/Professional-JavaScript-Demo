@@ -84,7 +84,7 @@
     }
 
     var audio = document.getElementById('audio-player');
-    
+
     // 很可能maybe
     if (audio.canPlayType('audio/mpeg')) {
         // 进一步处理
@@ -94,6 +94,11 @@
     if (audio.canPlayType('audio/ogg; codecs="vorbis"')) {
         // 进一步处理
     }
+
+    var audio = new Audio('test.mp3');
+    EventUtil.addHandler(audio, 'canplaythrough', function (event) {
+        audio.play();
+    });
 </script>
 </body>
 </html>
