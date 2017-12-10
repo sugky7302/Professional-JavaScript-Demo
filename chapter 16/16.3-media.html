@@ -78,6 +78,10 @@
     setInterval(function () {
         curtime.innerHTML = player.currentTime;
     }, 250);
+
+    if (audio.canPlayType('audio/mpeg')){
+        // 进一步处理
+    }
 </script>
 </body>
 </html>
