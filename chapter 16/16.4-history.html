@@ -6,7 +6,24 @@
 </head>
 <body>
 <script>
+    EventUtil.addHandler(btn, 'click', function (event) {
+        if (player.paused){
+            player.play();
+            btn.value = 'Pause';
+        }else {
+            player.pause();
+            btn.value = 'Play';
+        }
+    });
+
     history.pushState({name: 'TangCheng'}, "tc's page", 'tc.html');
+
+    EventUtil.addHandler(window, 'popstate', function (event) {
+        var state = event.state;
+        if (state){     // 第一个页面加载时state为空
+            processState(state);
+        }
+    });
 </script>
 </body>
 </html>
