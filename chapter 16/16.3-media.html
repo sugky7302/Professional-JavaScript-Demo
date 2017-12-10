@@ -22,7 +22,7 @@
 
 <div class="mediaplayer">
     <div class="video">
-        <video id="player" src="movie.mov" poster="mymovie.jpg" width="300" height="200">
+        <video id="player" src="毒枭.Narcos.S01E01.中英字幕.WEB-HR.AAC.1024X576.x264.v2.mp4" poster="mymovie.jpg" width="300" height="200">
             video player not available.
         </video>
     </div>
@@ -31,5 +31,53 @@
         <span id="curtime">0</span>/<span id="duration">0</span>
     </div>
 </div>
+
+<script>
+    var EventUtil = {
+        addHandler: function (element, type, handler) {
+            if (element.addEventListener){
+                element.addEventListener(type, handler, false);
+            }else if (element.attachEvent){
+                element.attachEvent('on'+type, handler);
+            }else {
+                element['on' + type] = handler;
+            }
+        },
+
+        preventDefault: function (event) {
+            if (event.preventDefault){
+                event.preventDefault();
+            }else {
+                event.returnValue = false;
+            }
+        }
+    };
+
+    // 取得元素的引用
+    var player = document.getElementById('player'),
+        btn = document.getElementById('video-btn'),
+        curtime = document.getElementById('curtime'),
+        duration = document.getElementById('duration');
+
+    // 更新播放时间
+    duration.innerHTML = player.duration;
+
+    // 为按钮添加事件处理程序
+    
+    EventUtil.addHandler(btn, 'click', function (event) {
+        if (player.paused){
+            player.play();
+            btn.value = 'Pause';
+        }else {
+            player.pause();
+            btn.value = 'Play';
+        }
+    });
+
+    // 定时更新当前时间
+    setInterval(function () {
+        curtime.innerHTML = player.currentTime;
+    }, 250);
+</script>
 </body>
 </html>
