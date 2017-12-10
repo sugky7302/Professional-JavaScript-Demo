@@ -22,7 +22,7 @@
 
 <div class="mediaplayer">
     <div class="video">
-        <video id="player" src="毒枭.Narcos.S01E01.中英字幕.WEB-HR.AAC.1024X576.x264.v2.mp4" poster="mymovie.jpg" width="300" height="200">
+        <video id="player" src="test.mp4" poster="mymovie.jpg" width="300" height="200">
             video player not available.
         </video>
     </div>
@@ -63,7 +63,7 @@
     duration.innerHTML = player.duration;
 
     // 为按钮添加事件处理程序
-    
+
     EventUtil.addHandler(btn, 'click', function (event) {
         if (player.paused){
             player.play();
