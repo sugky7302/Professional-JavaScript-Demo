@@ -82,6 +82,18 @@
     if (audio.canPlayType('audio/mpeg')){
         // 进一步处理
     }
+
+    var audio = document.getElementById('audio-player');
+    
+    // 很可能maybe
+    if (audio.canPlayType('audio/mpeg')) {
+        // 进一步处理
+    }
+
+    // 很可能是probably
+    if (audio.canPlayType('audio/ogg; codecs="vorbis"')) {
+        // 进一步处理
+    }
 </script>
 </body>
 </html>
