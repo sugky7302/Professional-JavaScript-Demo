@@ -20,6 +20,8 @@
     var items2 = new Array(Number.MAX_VALUE);   // 抛出RangeError
 
     var obj = x;		// 在x并未声明的情况下抛出ReferenceError
+
+    eval('a ++ b');     // 抛出SyntaxError
 </script>
 </body>
 </html>
