@@ -22,8 +22,10 @@
     var obj = x;		// 在x并未声明的情况下抛出ReferenceError
 
     eval('a ++ b');     // 抛出SyntaxError
-    
+
     var o = new 10;     // 抛出TypeError
+    console.log('name' in true);    // 抛出TypeError
+    Function.prototype.toString.call('name');   // 抛出TypeError
 </script>
 </body>
 </html>
