@@ -26,6 +26,18 @@
     var o = new 10;     // 抛出TypeError
     console.log('name' in true);    // 抛出TypeError
     Function.prototype.toString.call('name');   // 抛出TypeError
+
+    try {
+        someFunction();
+    }catch (error){
+        if (error instanceof TypeError){
+            // 处理类型错误
+        }else if (error instanceof ReferenceError){
+            // 处理引用错误
+        }else {
+            // 处理其他类型错误
+        }
+    }
 </script>
 </body>
 </html>
