@@ -51,6 +51,15 @@
     throw new EvalError('that does not evaluate');
     throw new URIError('uri, is that you');
     throw new ReferenceError('you do not cite your references properly');
+
+    function CustomError(message) {
+        this.name = 'CustomError';
+        this.message = message;
+    }
+
+    CustomError.prototype = new Error();
+
+    throw new CustomError('My message');
 </script>
 </body>
 </html>
