@@ -62,6 +62,9 @@
     throw new CustomError('My message');
 
     function process(values) {
+        if (!(values instanceof Array)) {
+            throw new Error('process(): Argument must be an array');
+        }
         values.sort();
 
         for (var i = 0, len = values.length; i < len; i++) {
