@@ -75,6 +75,10 @@
 
         return -1;
     }
+
+    window.onerror = function (message, url, line) {
+        console.log(message);
+    }
 </script>
 </body>
 </html>
