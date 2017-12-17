@@ -97,6 +97,14 @@
         }
         return result;
     }
+
+    function getQueryString(url) {
+        var pos = url.indexOf('?');
+        if (pos > -1) {
+            return url.substring(pos + 1);
+        }
+        return "";
+    }
 </script>
 </body>
 </html>
