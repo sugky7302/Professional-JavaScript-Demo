@@ -130,6 +130,13 @@
             values.reverse();
         }
     }
+
+    function reverseSort(values) {
+        if (typeof values.sort == 'function') {               // 绝不要这样
+            values.sort();
+            values.reverse();
+        }
+    }
 </script>
 </body>
 </html>
