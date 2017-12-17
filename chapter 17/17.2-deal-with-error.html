@@ -116,6 +116,13 @@
             return "";
         }
     }
+
+    function reverseSort(values) {
+        if (values) {               // 绝不要这样
+            values.sort();
+            values.reverse();
+        }
+    }
 </script>
 </body>
 </html>
