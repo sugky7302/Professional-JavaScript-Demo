@@ -155,6 +155,11 @@
         url += encodeURIComponent(name) + '=' + encodeURIComponent(value);
         return url;
     }
+
+    var url = 'http://www.tc9011.com';
+    var newUrl = addQueryStringArg(url, 'redir', 'http://www.someotherdomain.com?a=b&c=d');
+
+    console.log(newUrl);
 </script>
 </body>
 </html>
