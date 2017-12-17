@@ -89,6 +89,14 @@
         console.log('image not loaded');
     });
     image.src = 'test.gif';     // 指定不存在的文件
+
+    function concat(str1, str2, str3) {
+        var result = str1 + str2;
+        if (str3) {             // 绝对不要这样
+            result += str3;
+        }
+        return result;
+    }
 </script>
 </body>
 </html>
