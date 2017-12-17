@@ -92,7 +92,7 @@
 
     function concat(str1, str2, str3) {
         var result = str1 + str2;
-        if (str3) {             // 绝对不要这样
+        if (typeof str3 == 'string') {             // 恰当比较
             result += str3;
         }
         return result;
