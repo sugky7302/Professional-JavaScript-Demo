@@ -40,6 +40,20 @@
     console.log(jsonText4);
     console.log(jsonText5);
 
+    var book = {
+        title: "professional javascript",
+        authors: [
+            "Nicholas C. Zakas"
+        ],
+        edition: 3,
+        year: 2011,
+        toJSON: function () {
+            return this.title;
+        }
+    };
+
+    var jsonText = JSON.stringify(book);
+
     var bookCopy = JSON.parse(jsonText);
 </script>
 </body>
