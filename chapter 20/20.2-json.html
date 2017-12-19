@@ -17,8 +17,24 @@
 
     var jsonText = JSON.stringify(book);
     var jsonText2 = JSON.stringify(book, ['title', 'edition']);
+    var jsonText3 = JSON.stringify(book, function (key, value) {
+        switch (key) {
+            case 'authors':
+                return value.join(",");
+
+            case 'year':
+                return 5000;
+
+            case "edition":
+                return undefined;
+
+            default:
+                return value;
+        }
+    });
     console.log(jsonText);
     console.log(jsonText2);
+    console.log(jsonText3);
 
     var bookCopy = JSON.parse(jsonText);
 </script>
