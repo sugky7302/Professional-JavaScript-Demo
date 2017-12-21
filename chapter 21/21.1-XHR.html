@@ -11,6 +11,12 @@
     xhr.open('get', 'example.php', false);
 
     xhr.send(null);
+
+    if ((xhr.status >= 200 && xhr.status < 300) || xhr.status == 304) {
+        console.log(xhr.responseText);
+    } else {
+        console.log('request was unsuccessful: ' + xhr.status);
+    }
 </script>
 </body>
 </html>
