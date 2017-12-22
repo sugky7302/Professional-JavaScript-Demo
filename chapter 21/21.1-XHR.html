@@ -29,6 +29,7 @@
     };
 
     xhr.open('get', 'example.txt', true);
+    xhr.setRequestHeader('MyHeader', 'MyValue');
     xhr.send(null);
 
     xhr.abort();
