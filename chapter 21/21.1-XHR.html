@@ -33,6 +33,9 @@
     xhr.send(null);
 
     xhr.abort();
+
+    var myHeader = xhr.getResponseHeader('MyHeader');
+    var allHeaders = xhr.getAllResponseHeaders();
 </script>
 </body>
 </html>
