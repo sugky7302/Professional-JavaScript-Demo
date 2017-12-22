@@ -17,6 +17,19 @@
     } else {
         console.log('request was unsuccessful: ' + xhr.status);
     }
+
+    xhr.onreadystatechange = function () {
+        if (xhr.readyState == 4) {
+            if (xhr.status >= 200 && xhr.status < 300) {
+                console.log(xhr.responseText);
+            } else {
+                console.log('request was unsuccessful: ' + xhr.status);
+            }
+        }
+    };
+
+    xhr.open('get', 'example.txt', true);
+    xhr.send(null);
 </script>
 </body>
 </html>
