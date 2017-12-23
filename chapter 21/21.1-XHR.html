@@ -36,6 +36,8 @@
 
     var myHeader = xhr.getResponseHeader('MyHeader');
     var allHeaders = xhr.getAllResponseHeaders();
+
+    xhr.open('get', 'example.php?name1=value1&name2=value2', true);
 </script>
 </body>
 </html>
