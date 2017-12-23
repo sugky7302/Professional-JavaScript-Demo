@@ -33,6 +33,11 @@
     };
     var form = document.getElementById('user-info');
     xhr.send(new FormData(form));
+
+    var xhr = createXHR();
+    xhr.open('get', 'text.php', true);
+    xhr.overrideMimeType('text/xml');
+    xhr.send(null);
 </script>
 </body>
 </html>
