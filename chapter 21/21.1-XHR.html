@@ -38,6 +38,21 @@
     var allHeaders = xhr.getAllResponseHeaders();
 
     xhr.open('get', 'example.php?name1=value1&name2=value2', true);
+
+    function addURLParam(url, name, value) {
+        url += (url.indexOf('?') == -1 ? '?' : '&');
+        url += encodeURIComponent(name) + '=' + encodeURIComponent(value);
+        return url;
+    }
+
+    var url = 'example.php';
+
+    // 添加参数
+    url = addURLParam(url, 'name', 'tc');
+    url = addURLParam(url, 'book', 'js');
+
+    // 初始化请求
+    xhr.open('get', url, false);
 </script>
 </body>
 </html>
