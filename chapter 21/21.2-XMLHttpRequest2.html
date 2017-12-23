@@ -23,6 +23,10 @@
     };
 
     xhr.open('post', 'postexample.php', true);
+    xhr.timeout = 1000;     // 将超时设置为1秒钟(仅适用于IE8+)
+    xhr.ontimeout = function () {
+        console.log('request did not return in a second')
+    };
     var form = document.getElementById('user-info');
     xhr.send(new FormData(form));
 </script>
