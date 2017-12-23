@@ -13,16 +13,16 @@
 
     var xhr = createXHR();
     xhr.onreadystatechange = function () {
-        try {
-            if (xhr.readyState == 4) {
+        if (xhr.readyState == 4) {
+            try {
                 if ((xhr.status >= 200 && xhr.status < 300) || xhr.status == 304) {
                     console.log(xhr.responseText);
                 } else {
                     console.log('request was unsuccessful: ' + xhr.status);
                 }
-            }
-        } catch (ex) {
+            } catch (ex) {
 
+            }
         }
     };
 
