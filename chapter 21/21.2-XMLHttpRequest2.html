@@ -49,6 +49,23 @@
 
     xhr.open('get', 'altevent.php', true);
     xhr.send(null);
+
+    var xhr = createXHR();
+    xhr.onload = function (event) {
+        if ((xhr.status >= 200 && xhr.status < 300) || xhr.status == 304) {
+            console.log(xhr.reponseText);
+        } else {
+            console.log('request was unsuccessful: ' + xhr.status);
+        }
+    };
+    xhr.onprogress = function (event) {
+        var divStatus = document.getElementById('status');
+        if (event.lengthComputable) {
+            divStatus.innerHTML = 'Received ' + event.position + 'of' + event.totalSize + 'bytes';
+        }
+    };
+    xhr.open('get', 'altevent.php', true);
+    xhr.send(null);
 </script>
 </body>
 </html>
