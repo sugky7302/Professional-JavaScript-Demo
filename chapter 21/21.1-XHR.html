@@ -51,8 +51,11 @@
     url = addURLParam(url, 'name', 'tc');
     url = addURLParam(url, 'book', 'js');
 
+    console.log(url);
     // 初始化请求
     xhr.open('get', url, false);
+
+    xhr.open('post', 'example.php', true);
 </script>
 </body>
 </html>
