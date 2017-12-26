@@ -11,6 +11,14 @@
         console.log('done')
     };
     img.src = 'http://tc9011.com/test?name=tc';
+
+    function handleResponse(response) {
+        console.log('you are at ip address' + response.ip + ', which is in ' + response.city + ', ' + response.region_name);
+    }
+
+    var script = document.createElement('script');
+    script.src = 'http://freegeoip.net/json/?callback=handleResponse';
+    document.body.insertBefore(script, document.body.firstChild);
 </script>
 </body>
 </html>
