@@ -72,11 +72,24 @@
         clientID: 'a'
     };
     socket.send(JSON.stringify(message));
-    
+
     socket.onmessage = function (event) {
         var data = event.data;
 
         // 处理数据
+    };
+
+    var socket = new WebSocket('ws://www.example.com/server.php');
+    socket.onopen = function () {
+        console.log('connection established');
+    };
+
+    socket.onerror = function () {
+        console.log('connection error');
+    };
+
+    socket.onclose = function () {
+        console.log('connection closed');
     };
 </script>
 </body>
