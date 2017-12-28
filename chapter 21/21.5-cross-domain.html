@@ -65,6 +65,13 @@
 
     var socket = new WebSockets('ws://www.example.com/server.php');
     socket.send('hello');
+
+    var message = {
+        time: new Date(),
+        text: 'hello',
+        clientID: 'a'
+    };
+    socket.send(JSON.stringify(message));
 </script>
 </body>
 </html>
