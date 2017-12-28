@@ -91,6 +91,10 @@
     socket.onclose = function () {
         console.log('connection closed');
     };
+
+    socket.onclose = function (event) {
+        console.log('was clean? ' + event.wasClean + 'code = ' + event.code + 'reason = ' + event.reason);
+    };
 </script>
 </body>
 </html>
