@@ -72,6 +72,12 @@
         clientID: 'a'
     };
     socket.send(JSON.stringify(message));
+    
+    socket.onmessage = function (event) {
+        var data = event.data;
+
+        // 处理数据
+    };
 </script>
 </body>
 </html>
