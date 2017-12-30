@@ -28,11 +28,28 @@
     }
 
     var person = new Person('tc', 27, 'fep');
-    
+
     var person = Person('tc', 27, 'fep');
     console.log(window.name);
     console.log(window.age);
     console.log(window.job);
+
+    function Person(name, age, job) {
+        if (this instanceof Person) {
+            this.name = name;
+            this.age = age;
+            this.job = job;
+        } else {
+            return new Person(name, age, job);
+        }
+    }
+
+    var person1 = Person('tc', 27, 'fep');
+    console.log(window.name);
+    console.log(person1.name);
+
+    var person2 = new Person('tc', 27, 'fep');
+    console.log(person2.name);
 </script>
 </body>
 </html>
