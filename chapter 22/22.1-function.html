@@ -8,6 +8,10 @@
 <script>
     var value = new Array();
     console.log(Object.prototype.toString.call(value));
+
+    function isArray(value) {
+        return Object.prototype.toString.call(value) == '[object Array]';
+    }
 </script>
 </body>
 </html>
