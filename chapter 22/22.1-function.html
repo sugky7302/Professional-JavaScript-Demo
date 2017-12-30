@@ -20,6 +20,14 @@
     function isRegExp(value) {
         return Object.prototype.toString.call(value) == '[object RegExp]';
     }
+
+    function Person(name, age, job) {
+        this.name = name;
+        this.age = age;
+        this.job = job;
+    }
+
+    var person = new Person('tc', 27, 'fep');
 </script>
 </body>
 </html>
