@@ -183,6 +183,14 @@
             };
         }
     })();
+
+    var handler = {
+        message: 'Event handled',
+
+        handleClick: function (event) {
+            console.log(this.message);
+        }
+    };
 </script>
 </body>
 </html>
