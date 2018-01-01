@@ -191,6 +191,9 @@
             console.log(this.message);
         }
     };
+
+    var btn = document.getElementById('my-btn');
+    EventUtil.addHandler(btn, 'click', handler.handleClick);
 </script>
 </body>
 </html>
