@@ -188,7 +188,7 @@
         message: 'Event handled',
 
         handleClick: function (event) {
-            console.log(this.message);
+            console.log(this.message + ":" + event.type);
         }
     };
 
@@ -206,6 +206,8 @@
     }
 
     EventUtil.addHandler(btn, 'click', bind(handler.handleClick, handler));
+
+    EventUtil.addHandler(btn, 'click', handler.handleClick.bind(handler));
 </script>
 </body>
 </html>
