@@ -204,6 +204,8 @@
             return fn.apply(context, arguments);
         };
     }
+
+    EventUtil.addHandler(btn, 'click', bind(handler.handleClick(, handler));)
 </script>
 </body>
 </html>
