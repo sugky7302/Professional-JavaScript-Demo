@@ -194,6 +194,11 @@
 
     var btn = document.getElementById('my-btn');
     EventUtil.addHandler(btn, 'click', handler.handleClick);
+
+    EventUtil.addHandler(btn, 'click', function (event) {
+        handler.handleClick(event);
+    });
+
 </script>
 </body>
 </html>
