@@ -228,6 +228,13 @@
             return fn.apply(null, finalArgs);
         };
     }
+
+    function add(num1, num2) {
+        return num1 + num2;
+    }
+
+    var curriedAdd = curry(add, 5);
+    console.log(curriedAdd(3));     // 8
 </script>
 </body>
 </html>
