@@ -257,6 +257,16 @@
 
     var btn = document.getElementById('my-btn');
     EventUtil.addHandler(btn, 'click', bind(handler.handleClick, handler, 'my-btn'));
+
+    var handler = {
+        message: 'event handled',
+        handleClick: function (name, event) {
+            console.log(this.message + ':' + name + ':' + event.type);
+        }
+    };
+    var btn = document.getElementById('my-btn');
+    EventUtil.addHandler(btn, 'click', bind(handler, 'my-btn'));
+
 </script>
 </body>
 </html>
