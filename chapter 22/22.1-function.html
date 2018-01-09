@@ -247,6 +247,14 @@
             return fn.apply(context, finalArgs);
         };
     }
+
+    var handler = {
+        message: 'event handled',
+        handleClick: function (name, event) {
+            console.log(this.message + ':' + name + ':' + event.type);
+        }
+    };
+
 </script>
 </body>
 </html>
