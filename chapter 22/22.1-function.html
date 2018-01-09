@@ -265,7 +265,7 @@
         }
     };
     var btn = document.getElementById('my-btn');
-    EventUtil.addHandler(btn, 'click', bind(handler, 'my-btn'));
+    EventUtil.addHandler(btn, 'click', handler.handleClick.bind(handler, 'my-btn'));
 
 </script>
 </body>
