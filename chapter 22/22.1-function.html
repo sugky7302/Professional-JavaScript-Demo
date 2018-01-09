@@ -238,6 +238,15 @@
 
     var curriedAdd = curry(add, 5, 12);
     console.log(curriedAdd());      // 17
+
+    function bind(fn, context) {
+        var args = Array.prototype.slice.call(arguments, 2);
+        return function () {
+            var innerArgs = Array.prototype.slice.call(arguments);
+            var finalArgs = args.concat(innerArgs);
+            return fn.apply(context, finalArgs);
+        };
+    }
 </script>
 </body>
 </html>
