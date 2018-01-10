@@ -7,10 +7,15 @@
 <body>
 <script>
     var person = {name: 'tc'};
+    console.log(Object.isExtensible(person));
+
     Object.preventExtensions(person);
+    console.log(Object.isExtensible(person));
 
     person.age = 29;
     console.log(person.age);    // undefined
+
+
 </script>
 </body>
 </html>
