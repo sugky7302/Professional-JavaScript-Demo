@@ -23,6 +23,15 @@
 
     delete  person.name;
     console.log(person.name);   // tc
+
+    var person = {name: 'tc'};
+    console.log(Object.isExtensible(person));   // true
+    console.log(Object.isSealed(person));       // false
+
+    Object.seal(person);
+    console.log(Object.isExtensible(person));   // false
+    console.log(Object.isSealed(person));       // true
+
 </script>
 </body>
 </html>
