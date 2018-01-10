@@ -15,7 +15,14 @@
     person.age = 29;
     console.log(person.age);    // undefined
 
+    var person = {name: 'tc'};
+    Object.seal(person);
 
+    person.age = 28;
+    console.log(person.age);    // undefined
+
+    delete  person.name;
+    console.log(person.name);   // tc
 </script>
 </body>
 </html>
