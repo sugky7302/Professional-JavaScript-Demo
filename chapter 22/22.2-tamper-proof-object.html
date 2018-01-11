@@ -32,6 +32,17 @@
     console.log(Object.isExtensible(person));   // false
     console.log(Object.isSealed(person));       // true
 
+    var person = {name: 'tc'};
+    Object.freeze(person);
+
+    person.age = 29;
+    console.log(person.age);    // undefined
+
+    delete person.name;
+    console.log(person.name);   // tc
+
+    person.name = 'tt';
+    console.log(person.name);   // tc
 </script>
 </body>
 </html>
