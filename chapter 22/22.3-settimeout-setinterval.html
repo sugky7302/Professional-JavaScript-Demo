@@ -14,6 +14,16 @@
         // 其他代码
     };
 
+    // 仅FIrefox中
+    setTimeout(function (diff) {
+        if (diff > 0) {
+            // 晚调用
+        } else if (diff < 0) {
+            // 早调用
+        } else {
+            // 调用及时
+        }
+    }, 250);
 </script>
 </body>
 </html>
