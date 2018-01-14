@@ -24,6 +24,12 @@
             // 调用及时
         }
     }, 250);
+
+    setTimeout(function () {
+        // 处理中
+
+        setTimeout(arguments.callee, interval);
+    }, interval);
 </script>
 </body>
 </html>
