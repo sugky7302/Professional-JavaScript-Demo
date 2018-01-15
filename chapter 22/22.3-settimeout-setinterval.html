@@ -66,6 +66,15 @@
             }
         }, 100)
     }
+
+    var data = [123, 123, 1234, 4323, 3241, 332, 213, 21312, 321, 23, 11];
+
+    function printValue(item) {
+        var div = document.getElementById('myDiv');
+        div.innerHTML += item + '<br>';
+    }
+
+    chunk(data, printValue);
 </script>
 </body>
 </html>
