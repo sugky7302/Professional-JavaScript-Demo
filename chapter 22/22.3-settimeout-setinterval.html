@@ -40,6 +40,10 @@
             setTimeout(arguments.callee, 50);
         }
     }, 50);
+
+    for (var i = 0, len = data.length; i < len; i++) {
+        process(data);
+    }
 </script>
 </body>
 </html>
