@@ -105,6 +105,11 @@
             method.call(context);
         }, 100);
     }
+
+    window.onresize = function () {
+        var div = document.getElementById('myDiv');
+        div.style.height = div.offsetWidth + 'px';
+    }
 </script>
 </body>
 </html>
