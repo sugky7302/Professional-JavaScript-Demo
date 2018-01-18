@@ -5,7 +5,7 @@
     <title>Title</title>
 </head>
 <body>
-<div class="draggable" style="position: absolute; background: red"></div>
+<div class="draggable" style="position: absolute; background: red; height: 100px; width: 100px"></div>
 <script>
     var EventUtil = {
         addHandler: function (element, type, handler) {
@@ -53,11 +53,11 @@
         }
     };
 
-    EventUtil.addHandler(document, 'mousemove', function (event) {
+    /*EventUtil.addHandler(document, 'mousemove', function (event) {
         var myDiv = document.getElementById('myDiv');
         myDiv.style.left = event.clientX + 'px';
         myDiv.style.top = event.clientY + 'px';
-    });
+    });*/
 
     var DragDrop = function () {
         var dragging = null;
@@ -104,6 +104,8 @@
           }
         }
     }();
+
+    DragDrop.enable();
 </script>
 </body>
 </html>
