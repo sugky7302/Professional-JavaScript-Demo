@@ -76,6 +76,19 @@
     Person.prototype.say = function (message) {
         this.fire({type: 'message', message: message});
     };
+
+    function handleMessage(event) {
+        console.log(event.target + ' says: ' + event.message);
+    }
+
+    // 创建新person
+    var person = new Person('tc', 28);
+
+    // 添加一个事件处理程序
+    person.addHandler('message', handleMessage);
+
+    // 在该对象上调用1个方法，它触发消息事件
+    person.say('hi there.');
 </script>
 </body>
 </html>
