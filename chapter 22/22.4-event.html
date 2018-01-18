@@ -71,7 +71,7 @@
         this.age = age;
     }
 
-    inheritPrototype(Person, age);
+    inheritPrototype(Person, EventTarget);
 
     Person.prototype.say = function (message) {
         this.fire({type: 'message', message: message});
