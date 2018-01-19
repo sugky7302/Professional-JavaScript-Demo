@@ -178,7 +178,7 @@
     });
     DragDrop.addHandler('dragend', function (event) {
         var status = document.getElementById('status');
-        status.innerHTML = 'start dragging ' + event.target.id;
+        status.innerHTML = '<br/>dropped ' + event.target.id + 'at (' + event.x + ',' + event.y + ')';
     });
 </script>
 </body>
