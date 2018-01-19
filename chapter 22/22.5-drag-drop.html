@@ -60,7 +60,9 @@
     });*/
 
     var DragDrop = function () {
-        var dragging = null;
+        var dragging = null,
+            diffX = 0,
+            diffY = 0;
 
         function handleEvent(event) {
             // 获取事件和目标
@@ -72,14 +74,16 @@
                 case 'mousedown' :
                     if (target.className.indexOf('draggable') > -1) {
                         dragging = target;
+                        diffX = event.clientX - target.offsetLeft;
+                        diffY = event.clientY - target.offsetTop;
                     }
                     break;
 
                 case 'mousemove' :
                     if (dragging !== null) {
-                        // assign location
-                        dragging.style.left = event.clientX + 'px';
-                        dragging.style.top = event.clientY + 'px';
+                        // 指定位置
+                        dragging.style.left = (event.clientX - diffX) + 'px';
+                        dragging.style.top = (event.clientY - diffY) + 'px';
                     }
                     break;
 
