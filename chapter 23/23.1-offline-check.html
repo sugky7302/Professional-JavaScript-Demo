@@ -21,6 +21,10 @@ EventUtil.addHandler(window, 'offline', function () {
 });
 
 applicationCache.update();
+
+EventUtil.addHandler(applicationCache, 'updateready', function () {
+    applicationCache.swapCache();
+});
 </script>
 </body>
 </html>
