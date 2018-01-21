@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" manifest="/offline.manifest">
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
@@ -19,6 +19,8 @@ EventUtil.addHandler(window, 'online', function () {
 EventUtil.addHandler(window, 'offline', function () {
     console.log('offline');
 });
+
+applicationCache.update();
 </script>
 </body>
 </html>
