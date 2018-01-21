@@ -11,6 +11,14 @@ if (navigator.onLine) {
 } else {
     // 执行离线状态时的任务
 }
+
+EventUtil.addHandler(window, 'online', function () {
+    console.log('online');
+});
+
+EventUtil.addHandler(window, 'offline', function () {
+    console.log('offline');
+});
 </script>
 </body>
 </html>
