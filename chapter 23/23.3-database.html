@@ -7,6 +7,8 @@
 <body>
 <script>
 document.cookie = 'name=tc';
+
+document.cookie = encodeURIComponent('name') + '=' +encodeURIComponent('tc');
 </script>
 </body>
 </html>
