@@ -118,6 +118,17 @@
             return null;
         }
     };
+
+    // 假设document.cookie = data=tc&book=pro%20js
+    
+    // 取得全部子cookie
+    var data = SubCookieUtil.getAll('data');
+    console.log(data.name);     // tc
+    console.log(data.book);     // pro js
+
+    // 逐个获取子cookie
+    console.log(SubCookieUtil.get('data', 'name'));     // tc
+    console.log(SubCookieUtil.get('data', 'book'));     // pro js
 </script>
 </body>
 </html>
