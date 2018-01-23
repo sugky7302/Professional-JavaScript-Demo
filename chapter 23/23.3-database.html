@@ -171,6 +171,16 @@
     // 逐个获取子cookie
     console.log(SubCookieUtil.get('data', 'name'));     // tc
     console.log(SubCookieUtil.get('data', 'book'));     // pro js
+
+    // 设置两个cookie
+    SubCookieUtil.set('data', 'name', 'tc');
+    SubCookieUtil.set('data', 'book', 'pro js');
+
+    // 设置全部子cookie和失效日期
+    SubCookieUtil.setAll('data', {name: 'tc', book: 'pro js'}, new Date('January 1, 2010'));
+
+    // 修改名字的值，并修改cookie的失效日期
+    SubCookieUtil.set('data', 'name', 'tc', new Date('February 1, 2010'));
 </script>
 </body>
 </html>
