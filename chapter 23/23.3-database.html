@@ -244,6 +244,8 @@
     EventUtil.addHandler(document, 'storage', function (event) {
         console.log('storage changed for ' + event.domain);
     });
+
+    var indexedDB = window.indexedDB || window.msIndexedDB || window.mozIndexedDB || window.webkitIndexedDB;
 </script>
 </body>
 </html>
