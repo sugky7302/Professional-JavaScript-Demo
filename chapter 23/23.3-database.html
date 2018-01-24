@@ -222,6 +222,12 @@
         var value = sessionStorage.getItem(key);
         console.log(key + '=' + value);
     }
+
+    // 使用delete删除一个值-在webkit中无效
+    delete sessionStorage.name;
+
+    // 使用方法删除一个值
+    sessionStorage.removeItem('book');
 </script>
 </body>
 </html>
