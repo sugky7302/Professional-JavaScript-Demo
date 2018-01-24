@@ -256,6 +256,18 @@
     request.onsuccess = function (event) {
         database = event.target.result;
     };
+
+    if (database.version != '1.0') {
+        request = database.setVersion('1.0');
+        request.onerror = function (event) {
+            console.log('something bad happened while trying to open: ' + event.target.errorCode);
+        };
+        request.onsuccess = function (event) {
+            console.log('database initialization complete. database name: ' + database.name + ', version: ' + database.version);
+        }
+    } else {
+        console.log('database initialization complete. database name: ' + database.name + ', version: ' + database.version);
+    }
 </script>
 </body>
 </html>
