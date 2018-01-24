@@ -275,6 +275,8 @@
         lastname: 'bond',
         password: 'foo'
     };
+
+    var store = db.createObjectStore('users', {keyPath: 'username'});
 </script>
 </body>
 </html>
