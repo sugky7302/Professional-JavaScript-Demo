@@ -158,6 +158,18 @@
             }
 
             document.cookie = cookieText;
+        },
+
+        unset: function (name, subName, path, domain, secure) {
+            var subcookies = this.getAll(name);
+            if (subcookies) {
+                delete subcookies(subName);
+                this.setAll(name, subcookies, null, path, domain, secure);
+            }
+        },
+
+        unsetAll: function (name, path, domain, secure) {
+            this.setAll(name, null, new Date(0), path, domain, secure);
         }
     };
 
