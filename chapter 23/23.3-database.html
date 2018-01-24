@@ -193,6 +193,12 @@
 
     // 修改名字的值，并修改cookie的失效日期
     SubCookieUtil.set('data', 'name', 'tc', new Date('February 1, 2010'));
+
+    // 仅删除名为name的子cookie
+    SubCookieUtil.unset('data', 'name');
+
+    // 删除整个cookie
+    SubCookieUtil.unsetAll('data');
 </script>
 </body>
 </html>
