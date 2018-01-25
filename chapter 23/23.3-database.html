@@ -277,6 +277,13 @@
     };
 
     var store = db.createObjectStore('users', {keyPath: 'username'});
+
+    var i = 0,
+        len = user.length;
+
+    while (i < len) {
+        store.add(user[i++]);
+    }
 </script>
 </body>
 </html>
