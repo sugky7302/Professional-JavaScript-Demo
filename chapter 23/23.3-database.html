@@ -284,6 +284,23 @@
     while (i < len) {
         store.add(user[i++]);
     }
+
+    // user中保存着一批用户对象
+    var i = 0,
+        request,
+        requests = [],
+        len = user.length;
+
+    while (i < len) {
+        request = store.add(user[i++]);
+        request.onerror = function () {
+            // 处理错误
+        };
+        request.onsuccess = function () {
+           // 处理成功
+        };
+        requests.push(request);
+    }
 </script>
 </body>
 </html>
