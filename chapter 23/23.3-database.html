@@ -316,6 +316,13 @@
         var result = event.target.result;
         console.log(result.firstname);
     };
+
+    transaction.onerror = function (event) {
+        // 整个事务都被取消了
+    };
+    transaction.oncomplete = function (event) {
+        // 整个事务都成功完成了
+    };
 </script>
 </body>
 </html>
