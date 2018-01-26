@@ -303,6 +303,9 @@
     }
 
     var transaction = db.transaction('user', 'anotherStore');
+    
+    var IDBTransaction = window.IDBTransaction || window.webkitIDBtransaction;
+
 </script>
 </body>
 </html>
