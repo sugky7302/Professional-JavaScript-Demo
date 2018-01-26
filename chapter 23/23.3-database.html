@@ -303,8 +303,10 @@
     }
 
     var transaction = db.transaction('user', 'anotherStore');
-    
+
     var IDBTransaction = window.IDBTransaction || window.webkitIDBtransaction;
+
+    var transaction = db.transaction('user', IDBTransaction.READ_WRITE);
 
 </script>
 </body>
