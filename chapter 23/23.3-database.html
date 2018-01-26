@@ -308,6 +308,14 @@
 
     var transaction = db.transaction('user', IDBTransaction.READ_WRITE);
 
+    var request = db.transaction('user').objectStore('user').get('007');
+    request.onerror = function (event) {
+        console.log('did not get the object');
+    };
+    request.onsuccess = function (event) {
+        var result = event.target.result;
+        console.log(result.firstname);
+    };
 </script>
 </body>
 </html>
