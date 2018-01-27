@@ -465,11 +465,10 @@
 
     var store = db.transaction('user').objectStore('user'),
         index = store.index('username'),
-        request = index.get();
+        request = index.get('007');
 
     request.onsuccess = function (event) {
         // 处理成功
-        // event.result.key中保存索引键，而event.result.value保存主键
     };
 </script>
 </body>
