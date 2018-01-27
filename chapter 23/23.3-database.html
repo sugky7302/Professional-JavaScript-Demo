@@ -361,6 +361,24 @@
             }
         }
     };
+
+    request.onsuccess = function (event) {
+        var cursor = event.target.result,
+            value,
+            deleteRequest;
+
+        if (cursor) {
+            if (cursor.key == 'foo') {
+                deleteRequest = cursor.delete();        // 请求删除当前项
+                deleteRequest.onsuccess = function () {
+                    // 处理成功
+                };
+                deleteRequest.onerror = function () {
+                    // 处理失败
+                };
+            }
+        }
+    };
 </script>
 </body>
 </html>
