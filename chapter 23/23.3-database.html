@@ -323,6 +323,16 @@
     transaction.oncomplete = function (event) {
         // 整个事务都成功完成了
     };
+
+    var store = db.transaction('user').objectStore('user'),
+        request = store.openCursor();
+
+    request.onsuccess = function (event) {
+        // 处理成功
+    };
+    request.onerror = function (event) {
+        // 处理失败
+    }
 </script>
 </body>
 </html>
