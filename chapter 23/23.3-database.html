@@ -491,6 +491,8 @@
         console.log('index name: ' + index.name + ', keypath: ' + index.keyPath + ', unique: ' + index.unique);
     }
 
+    var store = db.transaction('user').objectStore('user');
+    store.deleteIndex('username');
 </script>
 </body>
 </html>
