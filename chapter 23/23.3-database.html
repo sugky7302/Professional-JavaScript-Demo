@@ -389,8 +389,10 @@
             console.log('done');
         }
     };
-    
+
     var IDBKeyRange = window.IDBKeyRange || window.webkitIDBKeyRange;
+
+    var onlyRange = IDBKeyRange.only('007');
 
 </script>
 </body>
