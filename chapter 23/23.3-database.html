@@ -333,11 +333,32 @@
     request.onerror = function (event) {
         // 处理失败
     };
-    
+
     request.onsuccess = function (event) {
         var cursor = event.target.result;
         if (cursor) {
             console.log('key: ' + cursor.key + ', value: ' + JSON.stringify(cursor.value));
+        }
+    };
+
+    request.onsuccess = function (event) {
+        var cursor = event.target.result,
+            value,
+            updateRequest;
+
+        if (cursor) {
+            if (cursor.key == 'foo') {
+                value = cursor.value;       // 取得当前的值
+                value.password = 'magic';   // 更新密码
+
+                updateRequest = cursor.update(value);   // 请求保存更新
+                updateRequest.onsuccess = function () {
+                    // 处理成功
+                };
+                updateRequest.onerror = function () {
+                    // 处理失败
+                };
+            }
         }
     };
 </script>
