@@ -470,6 +470,15 @@
     request.onsuccess = function (event) {
         // 处理成功
     };
+
+    var store = db.transaction('user').objectStore('user'),
+        index = store.index('username'),
+        request = index.getKey('007');
+
+    request.onsuccess = function (event) {
+        // 处理成功
+        // event.result.key中保存索引键，而event.result.value保存主键
+    };
 </script>
 </body>
 </html>
