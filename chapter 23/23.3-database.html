@@ -499,10 +499,18 @@
     request = indexedDB.open('admin');
     request.onsuccess = function (event) {
         database = event.target.result;
-        
+
         database.onversionchange = function () {
             database.close();
         };
+    };
+
+    var request = database.setVersion('2.0');
+    request.onblocked = function () {
+        alert('please close all other tabs and try again');
+    };
+    request.onsuccess = function () {
+        // 处理成功，继续
     };
 </script>
 </body>
