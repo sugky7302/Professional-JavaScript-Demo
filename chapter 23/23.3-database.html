@@ -445,6 +445,14 @@
 
     var store = db.transaction('user').objectStore('user'),
         index = store.index('username');
+
+    var store = db.transaction('user').objectStore('user'),
+        index = store.index('username'),
+        request = index.openCursor();
+
+    request.onsuccess = function (event) {
+        // 处理成功
+    };
 </script>
 </body>
 </html>
