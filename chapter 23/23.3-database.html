@@ -442,6 +442,9 @@
 
     var store = db.transaction('user').objectStore('user'),
         index = store.createIndex('username', 'username', {unique: false});
+
+    var store = db.transaction('user').objectStore('user'),
+        index = store.index('username');
 </script>
 </body>
 </html>
