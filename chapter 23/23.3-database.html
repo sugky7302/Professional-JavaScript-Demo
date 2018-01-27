@@ -402,6 +402,9 @@
 
     // 从头开始，到键为ace的对象为止
     var upperRange = IDBKeyRange.upperBound('ace');
+
+    // 从头开始，到键为ace的上一个对象为止
+    var upperRange = IDBKeyRange.upperBound('ace', true);
 </script>
 </body>
 </html>
