@@ -394,6 +394,8 @@
 
     var onlyRange = IDBKeyRange.only('007');
 
+    // 从键为007的对象开始，然后可以移动到最后
+    var lowerRange = IDBKeyRange.lowerBound('007');
 </script>
 </body>
 </html>
