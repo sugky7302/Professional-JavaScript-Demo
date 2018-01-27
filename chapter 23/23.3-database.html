@@ -493,6 +493,17 @@
 
     var store = db.transaction('user').objectStore('user');
     store.deleteIndex('username');
+
+    var request, database;
+
+    request = indexedDB.open('admin');
+    request.onsuccess = function (event) {
+        database = event.target.result;
+        
+        database.onversionchange = function () {
+            database.close();
+        };
+    };
 </script>
 </body>
 </html>
