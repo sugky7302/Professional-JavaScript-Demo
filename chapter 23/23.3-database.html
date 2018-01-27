@@ -479,6 +479,18 @@
         // 处理成功
         // event.result.key中保存索引键，而event.result.value保存主键
     };
+
+    var store = db.transaction('user').objectStore('user'),
+        indexNames = store.indexNames,
+        index,
+        i = 0,
+        len = indexNames.length;
+
+    while (i < len) {
+        index = store.index(indexNames[i++]);
+        console.log('index name: ' + index.name + ', keypath: ' + index.keyPath + ', unique: ' + index.unique);
+    }
+
 </script>
 </body>
 </html>
