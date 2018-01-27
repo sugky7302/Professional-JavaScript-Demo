@@ -434,6 +434,8 @@
 
     var IDBCursor = window.IDBCursor || window.webkitIDBCursor;
 
+    var store = db.transaction('user').objectStore('user'),
+        request = store.openCursor(null, IDBCursor.NEXT_NO_DUPLICATE);
 </script>
 </body>
 </html>
