@@ -405,6 +405,18 @@
 
     // 从头开始，到键为ace的上一个对象为止
     var upperRange = IDBKeyRange.upperBound('ace', true);
+
+    // 从键为007的对象开始，到键为ace的对象为止
+    var boundRange = IDBKeyRange.bound('007', 'ace');
+
+    // 从键为007的对象的下一个对象开始，到键为ace的对象为止
+    var boundRange = IDBKeyRange.bound('007', 'ace', true);
+
+    // 从键为007的对象的下一个对象开始，到键为ace的对象的上一个对象为止
+    var boundRange = IDBKeyRange.bound('007', 'ace', true, true);
+
+    // 从键为007的对象开始，到键为ace的对象的上一个对象为止
+    var boundRange = IDBKeyRange.bound('007', 'ace', false, true);
 </script>
 </body>
 </html>
