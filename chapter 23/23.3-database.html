@@ -333,6 +333,13 @@
     request.onerror = function (event) {
         // 处理失败
     };
+    
+    request.onsuccess = function (event) {
+        var cursor = event.target.result;
+        if (cursor) {
+            console.log('key: ' + cursor.key + ', value: ' + JSON.stringify(cursor.value));
+        }
+    };
 </script>
 </body>
 </html>
