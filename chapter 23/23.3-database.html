@@ -379,6 +379,16 @@
             }
         }
     };
+
+    request.onsuccess = function (event) {
+        var cursor = event.target.result;
+        if (cursor) {
+            console.log('key: ' + cursor.key + ', value: ' + JSON.stringify(cursor.value));
+            cursor.continue();      // 移动到下一项
+        } else {
+            console.log('done');
+        }
+    };
 </script>
 </body>
 </html>
