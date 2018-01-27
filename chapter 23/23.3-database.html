@@ -439,6 +439,9 @@
 
     var store = db.transaction('user').objectStore('user'),
         request = store.openCursor(null, IDBCursor.PREV);
+
+    var store = db.transaction('user').objectStore('user'),
+        index = store.createIndex('username', 'username', {unique: false});
 </script>
 </body>
 </html>
