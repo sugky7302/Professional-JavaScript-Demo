@@ -24,5 +24,13 @@
     var name /*:String*/ = 'tc';
     var person /*Object*/ = null;
 </script>
+
+<!--使用了<script>的紧密耦合的HTML和JavaScript-->
+<script>
+    document.write('hello');
+</script>
+
+<!--使用事件处理程序属性值的紧密耦合的HTML和JavaScript-->
+<input type="button" value="click me" onclick="doSomething()" />
 </body>
 </html>
