@@ -32,5 +32,13 @@
 
 <!--使用事件处理程序属性值的紧密耦合的HTML和JavaScript-->
 <input type="button" value="click me" onclick="doSomething()" />
+
+<script>
+    // 将HTML紧密耦合到JavaScript
+    function insertMessage(msg) {
+        var container = document.getElementById('container');
+        container.innerHTML = '<div class="msg"><p class="post">' + msg +'</p>' + '<p><em>latest message above.</em></p></div>';
+    }
+</script>
 </body>
 </html>
