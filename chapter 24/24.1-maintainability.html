@@ -46,6 +46,17 @@
 
     // css对JavaScript的松散耦合
     element.className = 'edit';
+
+    function handleKeyPress(event) {
+        event = EventUtil.getEvent(event);
+        if (event.keyCode == 13) {
+            var target = EventUtil.getTarget(event);
+            var value = 5 * parseInt(target.value);
+            if (value > 10) {
+                document.getElementById('error-msg').style.display = 'block';
+            }
+        }
+    }
 </script>
 </body>
 </html>
