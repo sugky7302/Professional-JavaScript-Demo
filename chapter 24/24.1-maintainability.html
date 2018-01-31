@@ -78,6 +78,14 @@
     function sayName() {
         console.log(name);
     }
+
+    // 一个全局量---推荐
+    var MyApplication = {
+        name: 'tc',
+        sayName: function () {
+            console.log('this.name');
+        }
+    };
 </script>
 </body>
 </html>
