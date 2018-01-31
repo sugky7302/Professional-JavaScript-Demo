@@ -72,6 +72,12 @@
             validateValue(target.value);
         }
     }
+
+    // 两个全局量---避免
+    var name = 'tc';
+    function sayName() {
+        console.log(name);
+    }
 </script>
 </body>
 </html>
