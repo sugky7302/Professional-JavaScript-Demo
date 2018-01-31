@@ -96,6 +96,12 @@
     // 将书中用到的对象附加上去
     Wrox.ProJS.EventUtil = {};
     Wrox.ProJS.CookieUtil = {};
+
+    function sortArray(values) {
+        if (values != null) {       // 避免
+            values.sort(comparator);
+        }
+    }
 </script>
 </body>
 </html>
