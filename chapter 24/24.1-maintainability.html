@@ -136,6 +136,16 @@
         var msg = document.getElementById('msg');
         msg.innerHTML = 'Update complete';
     }
+
+    function updateUI() {
+        var doc = document;
+        var imgs = doc.getElementsByTagName('img');
+        for (var i = 0, len = imgs.length; i < len; i++) {
+            imgs[i].title = doc.title + ' image ' + i;
+        }
+        var msg = doc.getElementById('msg');
+        msg.innerHTML = 'Update complete';
+    }
 </script>
 </body>
 </html>
