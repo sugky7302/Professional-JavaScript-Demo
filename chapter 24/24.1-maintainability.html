@@ -108,6 +108,13 @@
             values.sort(comparator);
         }
     }
+
+    function validate(value) {
+        if (!value) {
+            console.log('invalid value!');
+            location.href = '/errors/invalid.php';
+        }
+    }
 </script>
 </body>
 </html>
