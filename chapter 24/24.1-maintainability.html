@@ -146,6 +146,13 @@
         var msg = doc.getElementById('msg');
         msg.innerHTML = 'Update complete';
     }
+
+    function updateBody() {
+        with (document.body) {
+            alert(tagName);
+            innerHTML = 'hello';
+        }
+    }
 </script>
 </body>
 </html>
