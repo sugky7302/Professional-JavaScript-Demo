@@ -184,6 +184,13 @@
     for (var i = value.length - 1; i >= 0; i--) {
         process(value[i]);
     }
+
+    var i = value.length - 1;
+    if (i > -1) {
+        do {
+            process(value[i]);
+        } while (--i >= 0);
+    }
 </script>
 </body>
 </html>
