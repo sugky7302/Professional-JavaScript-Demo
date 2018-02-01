@@ -115,6 +115,18 @@
             location.href = '/errors/invalid.php';
         }
     }
+
+    var Constants = {
+        INVALID_VALUE_MSG: 'invalid value!',
+        INVALID_VALUE_URL: '/errors/invalid.php'
+    };
+    
+    function validate(value) {
+        if (!value) {
+            alert(Constants.INVALID_VALUE_MSG);
+            location.href = Constants.INVALID_VALUE_URL;
+        }
+    }
 </script>
 </body>
 </html>
