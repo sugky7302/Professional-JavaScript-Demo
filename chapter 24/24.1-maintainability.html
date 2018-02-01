@@ -120,12 +120,21 @@
         INVALID_VALUE_MSG: 'invalid value!',
         INVALID_VALUE_URL: '/errors/invalid.php'
     };
-    
+
     function validate(value) {
         if (!value) {
             alert(Constants.INVALID_VALUE_MSG);
             location.href = Constants.INVALID_VALUE_URL;
         }
+    }
+
+    function updateUI() {
+        var imgs = document.getElementsByTagName('img');
+        for (var i = 0, len = imgs.length; i < len; i++) {
+            imgs[i].title = document.title + ' image ' + i;
+        }
+        var msg = document.getElementById('msg');
+        msg.innerHTML = 'Update complete';
     }
 </script>
 </body>
