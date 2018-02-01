@@ -177,6 +177,9 @@
     var url = window.location.href;
     var query = url.substring(url.indexOf('?'));
 
+    for (var i = 0; i < value.length; i++) {
+        process(value[i]);
+    }
 </script>
 </body>
 </html>
