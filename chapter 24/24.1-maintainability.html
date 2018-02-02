@@ -191,6 +191,11 @@
             process(value[i]);
         } while (--i >= 0);
     }
+
+    // 消除循环
+    process(value[0]);
+    process(value[1]);
+    process(value[2]);
 </script>
 </body>
 </html>
