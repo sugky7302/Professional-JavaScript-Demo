@@ -245,6 +245,19 @@
 
     // 设置超时--避免
     setTimeout('alert("hello")', 500);
+
+    // 已修正
+    alert('hello');
+    
+    // 创建新函数--已修正
+    var sayHi = function () {
+        alert('hello');
+    };
+
+    // 设置一个超时--已修正
+    setTimeout(function () {
+        alert('hello');
+    }, 500);
 </script>
 </body>
 </html>
