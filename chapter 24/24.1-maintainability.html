@@ -215,6 +215,36 @@
         }
         startAt = 0;
     } while (--iterations > 0);
+
+    var iterations = Math.floor(values.length / 8);
+    var leftover = values.length % 8;
+    var i = 0;
+
+    if (leftover > 0 ) {
+        do {
+            process(values[i++]);
+        } while (--leftover > 0);
+    }
+    do {
+        process(values[i++]);
+        process(values[i++]);
+        process(values[i++]);
+        process(values[i++]);
+        process(values[i++]);
+        process(values[i++]);
+        process(values[i++]);
+        process(values[i++]);
+        process(values[i++]);
+    } while (--iterations > 0);
+
+    // 某些代码求值--避免
+    eval('alert("hello")');
+
+    // 创建新函数--避免
+    var sayHi = new Function('alert("hello")');
+
+    // 设置超时--避免
+    setTimeout('alert("hello")', 500);
 </script>
 </body>
 </html>
