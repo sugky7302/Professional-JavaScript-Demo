@@ -6,7 +6,15 @@
 </head>
 <body>
 <script>
-    
+    (function () {
+        function updateAnimations() {
+            doAnimation1();
+            doAnimation2();
+            // 其他动画
+        }
+
+        setInterval(updateAnimations, 100);
+    })();
 </script>
 </body>
 </html>
