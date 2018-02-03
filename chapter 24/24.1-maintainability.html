@@ -316,7 +316,7 @@
         fragment = document.createDocumentFragment(),
         item,
         i;
-    
+
     for (i = 0; i < 10; i++) {
         item = document.createElement('li');
         fragment.appendChild(item);
@@ -324,6 +324,16 @@
     }
 
     list.appendChild(fragment);
+
+    var list = document.getElementById('myList'),
+        html = '',
+        i;
+
+    for (i = 0; i < 10; i++) {
+        html += '<li>Item ' + i + '</li>';
+    }
+
+    list.innerHTML = html;
 </script>
 </body>
 </html>
