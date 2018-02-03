@@ -311,6 +311,19 @@
         list.appendChild(item);
         item.appendChild(document.createTextNode('Item ' + i));
     }
+
+    var list = document.getElementById('myList'),
+        fragment = document.createDocumentFragment(),
+        item,
+        i;
+    
+    for (i = 0; i < 10; i++) {
+        item = document.createElement('li');
+        fragment.appendChild(item);
+        item.appendChild(document.createTextNode('Item '+ i));
+    }
+
+    list.appendChild(fragment);
 </script>
 </body>
 </html>
