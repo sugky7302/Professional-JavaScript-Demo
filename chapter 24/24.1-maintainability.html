@@ -334,6 +334,13 @@
     }
 
     list.innerHTML = html;
+
+    var list = document.getElementById('myList'),
+        i;
+
+    for (i = 0; i < 10; i++) {
+        list.innerHTML += '<li>Item ' + i + '</li>';    // 避免
+    }
 </script>
 </body>
 </html>
