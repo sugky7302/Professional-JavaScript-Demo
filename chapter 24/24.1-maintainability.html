@@ -275,6 +275,20 @@
     i++;
 
     var name = values[i++];
+
+    // 4个语句创建和初始化数组---浪费
+    var values = new Array();
+    values[0] = 123;
+    values[1] = 456;
+    values[2] = 789;
+
+    // 用4个语句创建和初始化对象--浪费
+    var person = new Object();
+    person.name = 'tc';
+    person.age = 28;
+    person.sayName = function () {
+        alert(this.name);
+    };
 </script>
 </body>
 </html>
