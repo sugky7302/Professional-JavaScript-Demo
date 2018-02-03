@@ -301,6 +301,16 @@
             alert(this.name);
         }
     };
+
+    var list = document.getElementById('myList'),
+        item,
+        i;
+
+    for (i = 0; i < 10; i++) {
+        item = document.createElement('li');
+        list.appendChild(item);
+        item.appendChild(document.createTextNode('Item ' + i));
+    }
 </script>
 </body>
 </html>
