@@ -66,6 +66,12 @@
     function isHiddenSupported() {
         return typeof (document.hidden || document.msHidden || document.webkitHidden) != 'undefined';
     }
+
+    if (document.hidden || document.msHidden || document.webkitHidden) {
+        // 页面隐藏了
+    } else {
+        // 页面未隐藏
+    }
 </script>
 </body>
 </html>
