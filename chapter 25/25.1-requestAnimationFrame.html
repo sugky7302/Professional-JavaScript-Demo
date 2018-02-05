@@ -42,6 +42,26 @@
 
     var startTime = mozAnimationStartTime;
     mozRequestAnimationFrame(draw);
+
+    (function () {
+        function draw(timestamp) {
+            // 计算两次重绘时间间隔
+            var drawStart = (timestamp || Date.now()),
+                diff = drawStart - startTime;
+
+            // 使用diff确定下一步的绘制时间
+
+            // 把startTime重写为这一次的绘制时间
+            startTime = drawStart;
+
+            // 重绘UI
+            requestAnimationFrame(draw);
+        }
+
+        var requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame || window.webkitRequestAnimationFrame || window.msRequestAnimationFrame,
+            startTime = window.mozAnimationStartTime || Date.now();
+        requestAnimationFrame(draw);
+    })();
 </script>
 </body>
 </html>
