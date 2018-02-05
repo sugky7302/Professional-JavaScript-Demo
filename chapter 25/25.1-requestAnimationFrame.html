@@ -19,13 +19,29 @@
     function updateProgress() {
         var div = document.getElementById('status');
         div.style.width = (parseInt(div.style.width, 10) + 5) + '%';
-        
+
         if (div.style.left != '100%') {
             mozRequestAnimationFrame(updateProgress);
         }
     }
 
     mozRequestAnimationFrame(updateProgress);
+
+    function draw(timestamp) {
+        // 计算两次重绘的时间间隔
+        var diff = timestamp - startTime;
+
+        // 使用diff确定下一步的绘制时间
+
+        // 把startTime重写为这一次的重绘时间
+        startTime = timestamp;
+
+        // 重绘UI
+        mozRequestAnimationFrame(draw);
+    }
+
+    var startTime = mozAnimationStartTime;
+    mozRequestAnimationFrame(draw);
 </script>
 </body>
 </html>
