@@ -72,6 +72,24 @@
     } else {
         // 页面未隐藏
     }
+
+    function handleVisibilityChange() {
+        var output = document.getElementById('output'),
+            msg;
+
+        if (document.hidden || document.msHidden || document.webkitHidden) {
+            msg = 'page is now hidden. ' + (new Date()) + '<br>';
+        } else {
+            msg = 'page is now visible. ' + (new Date()) + '<br>';
+        }
+
+        output.innerHTML += msg;
+    }
+
+    // 要为两个事件都指定事件处理程序
+    EventUtil.addHandler(document, 'msVisibilitychange', handleVisibilityChange);
+
+    EventUtil.addHandler(document, 'webkitvisibiltychange', handleVisibilityChange);
 </script>
 </body>
 </html>
