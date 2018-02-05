@@ -62,6 +62,10 @@
             startTime = window.mozAnimationStartTime || Date.now();
         requestAnimationFrame(draw);
     })();
+
+    function isHiddenSupported() {
+        return typeof (document.hidden || document.msHidden || document.webkitHidden) != 'undefined';
+    }
 </script>
 </body>
 </html>
