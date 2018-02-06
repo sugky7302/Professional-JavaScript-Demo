@@ -183,7 +183,7 @@
             output = document.getElementById('output'),
             progress = document.getElementById('progress'),
             files = EventUtil.getTarget(event).files,
-            reader = new FileReader();
+            reader = new FileReader(),
             blob = blobSlice(files[0], 0, 32);
 
         if (blob) {
