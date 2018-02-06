@@ -164,6 +164,18 @@
             output.innerHTML = html;
         };
     });
+
+    function blobSlice(blob, startByte, length) {
+        if (blob.slice) {
+            return blob.slice(startByte, length);
+        } else if (blob.webkitSlice) {
+            return blob.webkitSlice(startByte, length);
+        } else if (blob.mozSlice) {
+            return blob.mozSlice(startByte, length);
+        } else {
+            return null;
+        }
+    }
 </script>
 </body>
 </html>
