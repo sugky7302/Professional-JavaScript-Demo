@@ -90,6 +90,10 @@
     EventUtil.addHandler(document, 'msVisibilitychange', handleVisibilityChange);
 
     EventUtil.addHandler(document, 'webkitvisibiltychange', handleVisibilityChange);
+
+    navigator.geolocation.getCurrentPosition(function (position) {
+        drawMapCenterrdAt(position.coords.latitude, position.coords.longitude);
+    });
 </script>
 </body>
 </html>
