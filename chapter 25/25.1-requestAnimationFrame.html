@@ -93,6 +93,9 @@
 
     navigator.geolocation.getCurrentPosition(function (position) {
         drawMapCenterrdAt(position.coords.latitude, position.coords.longitude);
+    }, function (error) {
+        console.log('Error code: ' + error.code);
+        console.log('Error message: ' + error.message);
     });
 </script>
 </body>
