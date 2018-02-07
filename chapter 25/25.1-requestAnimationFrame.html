@@ -292,8 +292,10 @@
     EventUtil.addHandler(droptarget, 'dragenter', handleEvent);
     EventUtil.addHandler(droptarget, 'dragover', handleEvent);
     EventUtil.addHandler(droptarget, 'drop', handleEvent);
-    
+
     var worker = new Worker('stufftodo.js');
+
+    worker.postMessage('start! ');
 </script>
 </body>
 </html>
