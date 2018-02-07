@@ -306,7 +306,11 @@
         var data = event.data;
 
         // 对数据进行处理
-    }
+    };
+
+    worker.onerror = function (event) {
+        console.log('error: ' + event.filename + ' (' + event.lineno + '); ' + event.message);
+    };
 </script>
 </body>
 </html>
