@@ -313,6 +313,13 @@
     };
 
     worker.terminate();     // 立即停止Worker的工作
+
+    // web worker 内部的代码
+    self.onmessage = function (event) {
+        var data = event.data;
+
+        // 处理数据
+    };
 </script>
 </body>
 </html>
