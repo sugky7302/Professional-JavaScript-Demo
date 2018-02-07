@@ -200,7 +200,7 @@
             alert("your browser doesn't support slice().");
         }
     });
-    
+
     function createObjectURL(blob) {
         if (window.URL) {
             return window.URL.createObjectURL(blob);
@@ -210,6 +210,26 @@
             return null;
         }
     }
+
+    var filesList = document.getElementById('files-list');
+    EventUtil.addHandler(filesList, 'change', function (event) {
+        var info = '',
+            output = document.getElementById('output'),
+            progress = document.getElementById('progress'),
+            files = EventUtil.getTarget(event).files,
+            reader = new FileReader(),
+            url = createObjectURL(files[0]);
+
+        if (url) {
+            if (/image/.test(files[0].type)) {
+                output.innerHTML = '<img src="' + url + '">';
+            } else {
+                output.innerHTML = 'not an image. ';
+            }
+        } else {
+            output.innerHTML = "your browser doesn\'t support object URLs."
+        }
+    });
 </script>
 </body>
 </html>
