@@ -301,6 +301,12 @@
         type: 'command',
         message: 'start!'
     });
+
+    worker.onmessage = function (event) {
+        var data = event.data;
+
+        // 对数据进行处理
+    }
 </script>
 </body>
 </html>
