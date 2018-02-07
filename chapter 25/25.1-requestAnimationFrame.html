@@ -311,6 +311,8 @@
     worker.onerror = function (event) {
         console.log('error: ' + event.filename + ' (' + event.lineno + '); ' + event.message);
     };
+
+    worker.terminate();     // 立即停止Worker的工作
 </script>
 </body>
 </html>
