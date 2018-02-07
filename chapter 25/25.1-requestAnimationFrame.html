@@ -338,12 +338,15 @@
 
     worker.onmessage = function (event) {
         var data = event.data;
-        
+
         // 对排序后的数组进行操作
     };
 
     // 将数组发送给worker排序
     worker.postMessage(data);
+
+    // web worker 内部的代码
+    self.close();
 </script>
 </body>
 </html>
