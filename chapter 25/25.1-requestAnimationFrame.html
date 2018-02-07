@@ -296,6 +296,11 @@
     var worker = new Worker('stufftodo.js');
 
     worker.postMessage('start! ');
+
+    worker.postMessage({
+        type: 'command',
+        message: 'start!'
+    });
 </script>
 </body>
 </html>
